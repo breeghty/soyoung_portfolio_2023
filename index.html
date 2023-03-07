@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프런트엔드 조소영의 포트폴리오 홈 페이지입니다.</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/3f4ea489e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 -->
+        <header>
+            <div class="header_inner">
+                <h1 class="logo yellow mon-bd" aria-label="홈으로 가기" title='홈으로 가기'>
+                    <a href="index.html">
+                        .soyoung
+                    </a>
+                </h1>
+                <nav class="mon-rg" aria-label="로컬 내비게이션" title="로컬 내비게이션">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Skill</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Comment</a></li>
+                </nav>
+                <div class='gnb' role="navigation" aria-label="글로벌 내비게이션" title="글로벌 내비게이션" >
+                    <!-- 열기 버튼 -->
+                    <button type="button" class="gnb_open_btn btn" aria-label="글로벌 내비게이션 열기" title='글로벌 내비게이션 열기'>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="gnb_open">
+                        <ul class="gnb_open_list mon-bd">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Work Gallery</a></li>
+                            <li><a href="#">Portfolio Making</a></li>
+                        </ul>
+                        <button class="btn gnb_close">
+                            <img src="img/gnb_close.png" alt="글로벌 내비게이션 닫기">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 메인페이지 -->
+        <main>
+            <div class="inner">
+                <h1 class="mon-bd">WELCOME TO <br><span class="yellow">SOYOUNG</span>'S <br> PORTFOLIO</h1>
+                <div class="rotate_text">
+                    <img class='rotate'src="img/rotate_text.png" alt="Publisher Markup Developer Front-end">
+                    <img class='arr-down' src="img/arrow_down.png" alt="아래로 스크롤 하세요.">
+                </div> 
+                <div class="value mon-bd">
+                    <h2>Better <span class="yellow">Effort</span>,</h2>
+                    <h2>Better <span class="yellow">Web</span>,</h2>
+                    <h2>Better <span class="yellow">Life</span>.</h2>
+                </div>
+                <div class="introduction">
+                    <div class="intro_img" id="profile_img">
+                        <img  src="img/profile_color.png" alt="프로필 이미지 사진">
+                    </div>
+                    <div class="intro_txt">
+                        <h2 class="sans-bd">안녕하세요! <br class="mo">더 나은 웹을 추구하는 조소영입니다.</h2>
+                        <ul class="keyword yellow rob-rg">
+                            <li>#Publisher</li>
+                            <li>#Front-end</li>
+                            <li>#Markup Developer</li>
+                            <li>#UI/UX</li>
+                        </ul>
+                        <p class="intro_desc sans-li">
+                            대학에서 인문/사회 과학을 주로 공부했지만 교양과목으로 파이썬과 C언어를 수강하면서 코딩에 관심을 가지게 되었습니다. 2년 반 동안의 공무원 수험생활을 끝내고, 대학생 때부터 하고 싶어 했던  프런트엔드 분야에 다시 애정을 쏟기 시작했습니다. 
+                            종로 이젠 아카데미에서 <모바일웹 UI/UX 디자인&프론트엔드(React.js)> 과정을 수강하고, 스스로 반응형 웹을 만들면서 웹접근성, SEO와 관련된 이슈들을 독학했습니다. 웹을 만들며 ‘어떻게 하면 효과적으로 정보를 전달하면서 브랜드의 가치를 전달할 수 있는 웹을 만들 수 있을까’에 대해 항상 고민합니다. 
+                            웹은 사용자가 편하게 사용할 수 있어야 하며 해당 브랜드의 가치를 쉽게 이해할 수 있도록 만들어져야 한다고 생각합니다. 언제나 사용자의 관점에서 생각하며 더 나은 노력으로 더 나은 웹을 만드는 ‘조력자’가 되겠습니다.
+                        </p>
+                        <ul class="icon">
+                            <li>
+                                <a href="#">
+                                    <img src="img/github_icon.png" alt="깃허브 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/tistory_icon.png" alt="티스토리 블로그 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/pinter_icon.png" alt="핀터레스트 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/resume_icon.png" alt="이력서 열람하기">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="intro_skill">
+                            <h3 class="intro_skill_title yellow .rob-md">Skill</h3>
+                            <ul class="intro_skill_list .rob-rg">
+                                <li>Coding Skill: HTML/CSS/Sass(SCSS)/Javascript/jQuery</li>
+                                <li>Design Skill: Photoshop, Illustrator, Adobe XD, Figma</li>
+                                <li>Etc. Github, Zeplin, Excel, Notion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- About 섹션 -->
+        <section class="about" id="about">
+            <div class="inner">
+                <h2 class="title yellow">About Me</h2>
+                <h3 class="title_kr">제 프로필과 교육이력, 자격증, 지금까지 해 왔던 활동들을 소개합니다.</h3>
+                <div class="about_left">
+                    <div class="profile">
+                        <h3 class="subTitle yellow">Profile</h3>
+                        <ul class="profile_content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsum impedit quis accusamus dicta voluptas, 
+                            odio quae quos, repudiandae officiis praesentium harum magnam veniam voluptatum totam autem tenetur sit consequatur.
+                        </ul>
+                    </div>
+                    <div class="education">
+                        <h3 class="subTitle yellow">Education</h3>
+                        <ul class="edu_content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsum impedit quis accusamus dicta voluptas, 
+                            odio quae quos, repudiandae officiis praesentium harum magnam veniam voluptatum totam autem tenetur sit consequatur.
+                        </ul>
+                    </div>
+                    <div class="license">
+                        <h3 class="subTitle yellow">License</h3>
+                        <ul class="licen_content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsum impedit quis accusamus dicta voluptas, 
+                            odio quae quos, repudiandae officiis praesentium harum magnam veniam voluptatum totam autem tenetur sit consequatur.
+                        </ul>
+                    </div>
+                </div>
+                <div class="about_right">
+                    <div class="aboutMe">
+                        <h3 class="subTitle yellow">History</h3>
+                        <ul class="about_content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsum impedit quis accusamus dicta voluptas, 
+                            odio quae quos, repudiandae officiis praesentium harum magnam veniam voluptatum totam autem tenetur sit consequatur.
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h3 class="subTitle yellow">Experiences</h3>
+                        <ul class="exper_content">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsum impedit quis accusamus dicta voluptas, 
+                            odio quae quos, repudiandae officiis praesentium harum magnam veniam voluptatum totam autem tenetur sit consequatur.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skill 섹션 -->
+        <section class="skill" id="skill">
+            <div class="inner">
+                <h2 class="title yellow">Skill</h2>
+                <h3 class="title_kr">제 프로필과 교육이력, 자격증, 지금까지 해 왔던 활동들을 소개합니다.</h3>
+                <div class="skill_container">
+                    <ul class="coding">
+                        <li>
+                            <button type="button" class="btn">HTML</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">CSS</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">SCSS</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Javascript</button>
+                        </li>
+                        <!-- <li>
+                            <button type="button" class="btn">React</button>
+                        </li> -->
+                    </ul>
+                    <ul class="design">
+                        <li>
+                            <button type="button" class="btn">Adobe XD</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Figma</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Photoshop</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Illustrator</button>
+                        </li>
+                    </ul>
+                    <ul class="etc_skill">
+                        <li>
+                            <button type="button" class="btn">Github</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Excel</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Notion</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn">Zeplin</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 성격을 나타내는 scroll 섹션 -->
+        <section class="pers_scroll">
+            <!-- 성격을 나타내는 영어 단어 -->
+            <div class="marquee_text">
+                <p class="en_text"></p>
+            </div>
+            <!-- 성격을 나타내는 한국어 단어 -->
+            <div class="marquee_text">
+                <p class="kr_text"></p>
+            </div>
+        </section>
+        <!-- work gallery-->
+        <section class="work" id="work">
+            <div class="inner">
+                <h2 class="title yellow">Work Gallery</h2>
+                <h3 class="title_kr">클론코딩 및 직접 디자인하고 코딩한 작업물들을 모았습니다. </h3>
+                <div style="overflow: hidden; height:100vh;">
+                    <div class="slide-container" id="slideBox">
+                        <div class="slide-box">
+                            <div class="imgBox">
+                                <img src="img/clone_img_1.png" alt="클론코딩 이미지 1" draggable="false">
+                            </div>
+                            <div class="textBox">
+                                <h2 class="title yellow">01. <br> Crew A La Mode</h2>
+                                <h3 class="subTitle">Clone Coding</h3>
+                                <p class="subTxt">#클론코딩 100% #웹표준 #웹접근성 #반응형웹 </p>
+                                <p class="subTxt">#HTML #CSS #Javascript  </p>
+                                <p class="subTxt">#Splittin.js 라이브러리 #video 태그 사용 #scroll 헤더 고정</p>
+                                <ul class="subIcon">
+                                    <li><a href="#"><img src="img/pc_mode.png" alt="PC 모드"></a></li>
+                                    <li><a href="#"><img src="img/tablet_mode.png" alt="태블릿 모드"></a></li>
+                                    <li><a href="#"><img src="img/mobile_mode.png" alt="모바일 모드"></a></li>
+                                    <li><a href="#"><img src="img/github_icon.png" alt="깃허브 코드 보기"></a></li>
+                                    <li><a href="#"><img src="img/more_detail.png" alt="자세히 보기"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slide-box">
+                            <div class="imgBox">
+                                <img src="2.jpg" alt="" draggable="false">
+                            </div>
+                            <div class="textBox">
+                                안녕하세요 이 사진은 어딘가 사진입니다.
+                            </div>
+                        </div>
+                        <div class="slide-box">
+                            <img src="3.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="slide-box">
+                            <img src="1.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="slide-box">
+                            <img src="2.jpg" alt="" draggable="false">
+                        </div>
+                        <div class="slide-box">
+                            <img src="3.jpg" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+                <button class="prev">Prev</button>
+                <button class="slide-1">1</button>
+                <button class="slide-2">2</button>
+                <button class="slide-3">3</button>
+                <button class="slide-4">4</button>
+                <button class="slide-5">5</button>
+                <button class="slide-6">6</button>
+                <button class="next">Next</button>
+            </div>
+        </section>
+        <!-- blog -->
+        <section class="blog" id="blog">
+            <div class="inner">
+                <h2 class="title yellow">Study Blog</h2>
+                <!-- positon:sticky -->
+                <div class="blog_icon">
+                    <div class="imgBox">
+                        <a href="#">
+                            <img src="img/tistory_blog.png" alt="티스토리 블로그로 바로가기">
+                        </a>
+                    </div>
+                    <div class="txtBox">
+                        <p>블로그에 공부한 것을 기록하며 나누고 있습니다.</p>
+                        <p>아이콘을 클릭하면 블로그로 이동합니다.</p>
+                        <p><a href="#">Loremdlifjsldijfsleijfslidjflsdjfsldjfsldjfsldijf</a></p>
+                    </div>
+                </div>
+                <ul class="blog_list">
+                    <li><a href="#">[웹접근성] 웹접근성을 고려한 마크업</a></li>
+                    <li><a href="#">[SEO 검색엔진 최적화] meta 태그 사용하기</a></li>
+                    <li><a href="#">Sass/SCSS 혼자 공부하기</a></li>
+                    <li><a href="#">[Javascript] DOM 텍스트 요소 조작하기</a></li>
+                    <li><a href="#">[Javascript] 이벤트 타입 종류</a></li>
+                    <li><a href="#">[Javscript]이벤트 핸들러 등록하기</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Comment -->
+        <section class="comment" id="comment">
+            <div class="inner">
+                <h2 class="title yellow">Comment</h2>
+                <h3 class="title_kr">클론코딩 및 직접 디자인하고 코딩한 작업물들을 모았습니다. </h3>
+                <ul class="comment_list">
+                    <li>
+                        <p class="comment_box">
+                            대학 시절 '현대인문세미나' 수업에서 조별 과제를 함께한 기억이 있다.
+                            소영이가 리더 역할을 톡톡히 해준 덕분에 소극적이었던 팀원들도 학기가 끝날 때쯤에는 편안한 분위기에서 자유롭게 의견을 나눌 수 있었다. 
+                            기본적으로 공동체에 선한 영향을 미치는 것에서 자부심과 행복을 느끼는 타입인 듯하다.
+                            목표지향적이며 질서정연함에도 따뜻한 인간미가 느껴지는 친구.
+                            사람에 대한 직관을 바탕으로 목표로 향하는 가장 온건한 길을 찾는 친구.
+                        </p>
+                        <p class="comment_author">석*아</p>
+                        <p class="comment_role">에디터/대학교 동기</p>
+                    </li>
+                    <li>
+                        <p class="comment_box">
+                            다재다능하다. 공부도 잘하고 예체능도 잘하고 말도 잘하고 주변 사람들과 잘 어울린다. 조별 수업 때나 학교 축제에서 리더 역할을 많이 했다.
+                            그런데 이게 타고난 것 이상으로 본인이 얼마나 노력 하는지 알기 때문에 더 대단하고 멋있어보인다.
+                        </p>
+                        <p class="comment_author">이*지</p>
+                        <p class="comment_role">회계팀 사원/중학교 동문</p>
+                    </li>
+                    <li>
+                        <p class="comment_box">
+                            눈으로 먹는 비타민! 매사에 긍정적이고 자기계발에 열정적인
+                            친구라 보기만 해도 해피력이 전파되고 나도 발전할 수 있도록
+                            옆에서 자극을 준다. 첫째라 그런지 책임감이 강하고 독립적이다.
+                        </p>
+                        <p class="comment_author">박*현</p>
+                        <p class="comment_role">공무원/중학교 동문</p>
+                    </li>
+                    <li>
+                        <p class="comment_box">
+                            차가운 머리와 따뜻한 마음을 모두 가진 친구입니다. 할 일을 멋지게 해내는
+                            모습에 감탄하고 해맑은 미소와 따스한 마음에 감동하게 되는 친구입니다.
+                            영감과 감동을 모두 주는, 오래오래 응원하고 싶은 사람.
+                        </p>
+                        <p class="comment_author">김*윤</p>
+                        <p class="comment_role">대학원생/고등학교 동문</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="thx_para">
+                THANK YOU FOR YOUR VISIT!
+            </div>
+            <div class="footer_inner">
+                <div class="contact-l">
+                    <p class="contact_title">
+                        LET'S <br class="mo">GET IN<br class="mo"><span class="yellow">TOUCH!</span>
+                    </p>
+                </div>
+                <div class="contact-2">
+                    <p class="contact_txt">
+                        꾸준히 성장하는 유능한 인재를 원하신다면 <br>
+                        책임감 있는 인재를 원하신다면 <br>
+                        조직에 활력을 불어 넣는 인재를 원하신다면 <br>
+                    </p>
+                    <!-- line -->
+                    <span class="contact_line"></span>
+                    <div class="contact_adr">
+                        <p class="e-mail">whthdud4356@naver.com</p>
+                        <p class="phone">010. 8865. 7865</p>
+                        <ul class="sns">
+                            <li>
+                                <a href="#">
+                                    <img src="img/github_icon.png" alt="깃허브 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/tistory_icon.png" alt="티스토리 블로그 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/pinter_icon.png" alt="핀터레스트 바로가기">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/resume_icon.png" alt="이력서 열람하기">
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright">ⓒ2023 .soyoung</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- js-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

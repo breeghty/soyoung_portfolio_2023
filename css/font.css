@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+
+.mon-bd{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.mon-rg{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.sans-bd{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+.sans-li{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+.sans-rg{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+.rob-md{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.rob-rg{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.rob-li{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}

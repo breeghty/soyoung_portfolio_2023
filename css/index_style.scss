@@ -1,0 +1,270 @@
+@use 'variables' as v;
+
+@mixin a_full{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+@mixin align{
+    display:flex;
+    justify-content: space-between;
+}
+@mixin sec{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    
+}
+@mixin sec_inner{
+    width: 1680px;
+    margin:0 auto;
+    padding-top: 50px;
+}
+@mixin title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+@mixin title_kr{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+/*헤더*/
+header{
+    width: 100%;
+    height:100px;
+    background: #000;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    .header_inner{
+        width: 1760px;
+        padding: 30px 0;
+        position:relative;
+        box-sizing:border-box;
+        margin:0 auto;
+        @include align;
+        .logo{
+            width: 117px;
+            height: 30px;
+            a{
+                @include a_full;
+                font-size: nth(v.$font-size,3);
+            }
+        }
+        nav{
+            @include align;
+            li{
+                width: 20%;
+                box-sizing: border-box;
+                margin:0px 20px;
+                padding:10px 20px;
+                a{
+                    @include a_full;
+                    font-size: nth(v.$font-size,2);
+                }
+            }
+        }
+        .gnb{
+            &_open_btn{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                right:0;
+                top:20%;
+                cursor:pointer;
+                i{
+                    font-size:36px;
+                }
+                
+            }
+        }
+    }
+}
+/*클릭시 열리는 메뉴바*/
+.gnb{
+    .gnb_open{
+        width: 100%;
+        height: 100vh;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:100;
+        background: #000;
+        .gnb_open_list{
+            color:#fff;
+            position:absolute;
+            top:50%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            
+            li{
+                margin-bottom: 40px;
+                a{
+                    font-size: nth(v.$font-size,6);
+                    transition: all 1s;
+                }
+            }
+        }
+        .gnb_close{
+            width: 65px;
+            height: 65px;
+            position:absolute;
+            top:5%;
+            right: 5%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+/*메뉴 열고 닫기*/
+.gnb{
+    .gnb_open{
+        width: 0%;
+        overflow:hidden;
+        transition: all 0.5s ease;
+        opacity: 0;
+        &.on{
+            width: 100%;
+            right:0;
+            opacity:1;
+            transition: all 0.5s ease;
+        }
+    }
+}
+/*섹션 공통*/
+section{
+    @include sec;
+    .inner{
+        @include sec_inner;
+        .title{
+            @include title;
+        }
+        .title_kr{
+            @include title_kr;
+        }
+    }
+}
+
+/*메인 섹션*/
+main{
+    @include sec;
+    margin-top:100px;
+    .inner{
+        @include sec_inner;
+        position:relative;
+        h1{
+            font-size: nth(v.$font-size,7);
+            margin: 50px 256px 250px 0;
+            line-height: 1.1;
+        }
+        .rotate_text{
+            width: 160px;
+            height: 160px;
+            position:absolute;
+            top: 20%;
+            right:10%;
+            float:left;
+            .rotate{
+                @include a_full;
+                animation: rotate_txt 10s infinite linear;
+            }
+            .arr-down{
+                width: 45px;
+                height: 45px;
+                position:absolute;
+                top: 50%;
+                right:50%;
+                transform: translate(50%,-50%);
+            }
+        }
+        .value{
+            font-size: nth(v.$font-size,5);
+            margin-bottom: 200px;
+            h2{
+                margin-bottom: 20px;
+            }
+        }
+        .introduction{
+            @include align;
+            box-sizing: border-box;
+            padding:20px;
+            .intro_img{
+                width: 40%;
+                img{
+                    width: 603px;
+                    height: 744px;
+                    display: block;
+                }
+            }
+            .intro_txt{
+                width: 60%;
+                padding: 20px;
+                h2{
+                    font-size: 48px;
+                    margin-bottom: 45px;
+                    line-height: 1.2;
+                }
+                .keyword{
+                    @include align;
+                    margin-bottom: 45px;
+                    li{
+                        font-size: nth(v.$font-size, 3);
+                    }
+                }
+                .intro_desc{
+                    font-size: 20px;
+                    margin-bottom: 45px;
+                    line-height: 1.5;
+                }
+                .icon{
+                    display: flex;
+                    margin-bottom: 35px;
+                    li{
+                        width: 42px;
+                        height: 42px;
+                        margin-right: 20px;
+                        &:nth-child(4){
+                            width: 45px;
+                            height: 45px;
+                            transform: translate(0,5px);
+                        }
+                        a{
+                            @include a_full;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .intro_skill{
+                    .intro_skill_title{
+                        font-size: nth(v.$font-size, 3);
+                        margin-bottom: 20px;
+                    }
+                    .intro_skill_list{
+                        font-size: nth(v.$font-size, 2);
+                        li{
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@keyframes rotate_txt {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
