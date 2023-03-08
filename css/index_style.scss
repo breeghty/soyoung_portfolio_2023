@@ -23,13 +23,37 @@
 @mixin title{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 64px;
+    font-size: nth(v.$font-size,5);
     margin-bottom: 20px;
 }
 @mixin title_kr{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size: 20px;
+    margin-bottom: 80px;
+}
+@mixin subTitle{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: nth(v.$font-size,4);
+    margin-bottom: 23px;
+}
+@mixin subTxt{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size:nth(v.$font-size,2);
+    margin-bottom: 15px;
+}
+@mixin about_li{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: nth(v.$font-size,2);
+    margin-bottom: 15px;
+}
+@mixin skill_li{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
     margin-bottom: 40px;
 }
 /*헤더*/
@@ -79,6 +103,7 @@ header{
                 cursor:pointer;
                 i{
                     font-size:36px;
+                    color:#fff;
                 }
                 
             }
@@ -204,7 +229,8 @@ main{
             }
             .intro_txt{
                 width: 60%;
-                padding: 20px;
+                padding: 25px;
+                box-sizing: border-box;
                 h2{
                     font-size: 48px;
                     margin-bottom: 45px;
@@ -224,7 +250,7 @@ main{
                 }
                 .icon{
                     display: flex;
-                    margin-bottom: 35px;
+                    margin-bottom: 45px;
                     li{
                         width: 42px;
                         height: 42px;
@@ -245,12 +271,12 @@ main{
                 .intro_skill{
                     .intro_skill_title{
                         font-size: nth(v.$font-size, 3);
-                        margin-bottom: 20px;
+                        margin-bottom: 24px;
                     }
                     .intro_skill_list{
                         font-size: nth(v.$font-size, 2);
                         li{
-                            margin-bottom: 20px;
+                            margin-bottom: 13px;
                         }
                     }
                 }
@@ -268,3 +294,252 @@ main{
     }
     
 }
+
+/*About*/
+.about{
+    .inner{
+        .about_left{
+            float:left;
+            width: 50%;
+            
+        }
+        .about_right{
+            float:right;
+            width: 50%;
+        }
+        .box{
+            margin-bottom: 45px;
+            .subTitle{
+                @include subTitle;
+            }
+            ul{
+                width: 95%;
+                padding: 10px;
+                li{
+                    @include about_li;
+                }
+        
+            }
+            .exper_content{
+                li{
+                    line-height: 1.5;
+                }
+            }
+        }
+        
+    }
+}
+
+/*skill*/
+.skill{
+    .inner{
+        .skill_container{
+            width: 90%;
+            @include align;
+            ul{
+                li{
+                    .btn{
+                        @include skill_li;
+                    }
+                }
+            }
+            /*모달창*/
+            .skill_modal{
+                width: 100%;
+                height: 100vh;
+                position:fixed;
+                top:0;
+                left:0;
+                background: rgba(255,255,255,0.5);
+                z-index:100;
+                .skill_modal_container{
+                    background: #000;
+                    width: 50%;
+                    height: 50vh;
+                    position:absolute;
+                    top:25%;
+                    left: 25%;
+                    border-radius:40px;
+                    color:#000;
+                    .skill_modal_box{
+                        padding: 85px 95px;
+                        .skill_modal_title{
+                            margin-bottom: 35px;
+                            font-size: nth(v.$font-size,5);
+                            color:v.$point-color; 
+
+                        }
+                        .skill_modal_desc{
+                            font-size: 20px;
+                            color:v.$basic-color;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*모달창 열고닫기*/
+.skill_modal{
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+    display: none;
+    &.on{
+        width: 100%;
+        left:0;
+        opacity:1;
+        transition: all 0.5s ease;
+    }
+}
+
+/*pers_scroll*/
+.pers_scroll{
+    width: 100%;
+    overflow-x: hidden;
+    .marquee_text{
+        width: 100vw;
+        margin-bottom: 2vh;
+        display: flex;
+        &:nth-child(2){
+            justify-content: flex-end;
+        }
+        .en_text, .kr_text{
+            display: flex;
+            font-size: clamp(1vw, 8vw, 4rem);
+            padding: 3vh 0;
+        }
+    }
+}
+
+/*work gallery 이미지 슬라이더*/
+.work{
+    .inner{
+        .slide-wrapper{
+            width: 100%;
+            overflow-x: hidden;
+            margin-bottom: 50px;
+            .slide-container{
+                width: 1000vw;
+                transition:all 0.5s ease;
+                .slide-box{
+                    width:100vw;
+
+                    float:left;
+                    overflow: hidden;
+                    @include align;
+                    .slide-img-box{
+                        width: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .slide-txt-box{
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 30px;
+                        margin-left: 3%;
+                        .title{
+                            margin-bottom: 35px;
+                            line-height: 1.5
+                        }
+                        .subTitle{
+                            @include subTitle;
+                            margin-bottom: 35px;
+                        }
+                        .subTxt{
+                            @include subTxt;
+                        }
+                        
+                        .subIcon{
+                            @include align;
+                            width: 30%;
+                            margin-top: 45px;
+                            
+                            li{
+                                &:nth-child(1){
+                                    width: 55px;
+                                    height: 50px;
+                                }
+                                &:nth-child(2){
+                                    width: 42px;
+                                    height: 48px;
+                                }
+                                &:nth-child(3){
+                                    width: 30px;
+                                    height: 46px;
+                                }
+                                &:nth-child(4){
+                                    width: 51px;
+                                    height: 50px;
+                                }
+                                &:nth-child(5){
+                                    width: 35px;
+                                    height: 46px;
+                                }
+                                a{
+                                    @include a_full;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_container{
+            display: inline-block;
+            margin-left: 10%;
+            button{
+                padding: 5px;
+                margin:5px;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: nth(v.$font-size,1);
+            }
+        }
+    }
+}
+
+/*section blog*/
+.blog{
+    .inner{
+        .title{
+            margin-bottom: 80px;
+        }
+        .blog_icon{
+            float:left;
+            position: sticky;
+            top:50%;
+            background: blue;
+            .blog_img{
+                width: 200px;
+                height: 200px;
+                a{
+                    @include a_full;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .blog_list{
+            background: red;
+        }
+    }
+}
+
+.comment{
+    .inner{
+        .comment_list{
+            @include align;
+        }
+    }
+}
+
