@@ -172,3 +172,30 @@ let num= 1;
                 
             }
         });
+
+
+        // Comment swiper.js
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            autoplay: {
+                delay: 5500,
+                disableOnInteraction: true,//스와이프 후 자동재생.
+            },
+            loop:false,
+            spaceBetween: 50,
+            centeredSlides: true,
+            breakpoints:{
+                //1720px보다 클 경우
+                1720:{
+                    slidesPerView: 2,
+                    spaceBetween: 150,
+                },
+                1000:{
+                    slidesPerView: 3,
+                },
+                767:{
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                }
+            }
+        });

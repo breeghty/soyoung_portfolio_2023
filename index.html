@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/index_style.css">
-    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/3f4ea489e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,10 +24,10 @@
                 </h1>
                 <nav class="mon-rg" aria-label="로컬 내비게이션" title="로컬 내비게이션">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Skill</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Comment</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#comment">Comment</a></li>
                 </nav>
                 <div class='gnb' role="navigation" aria-label="글로벌 내비게이션" title="글로벌 내비게이션" >
                     <!-- 열기 버튼 -->
@@ -473,26 +474,31 @@
             <div class="inner">
                 <h2 class="title yellow">Study Blog</h2>
                 <!-- positon:sticky -->
-                <div class="blog_icon">
-                    <div class="blog_img">
-                        <a href="https://liz52hz0322.tistory.com/" target="_blank">
-                            <img src="img/tistory_blog.png" alt="티스토리 블로그로 바로가기">
-                        </a>
+                <div class="blog_content">
+                    <div class="blog_icon">
+                        <div class="blog_img">
+                            <a href="https://liz52hz0322.tistory.com/" target="_blank">
+                                <img src="img/tistory_blog.png" alt="티스토리 블로그로 바로가기">
+                            </a>
+                        </div>
+                        <div class="blog_desc sans-li">
+                            <p>블로그에 공부한 것을 기록하며 나누고 있습니다.</p>
+                            <p>아이콘을 클릭하시면 블로그로 이동합니다.</p>
+                        </div>
                     </div>
-                    <div class="blog_desc">
-                        <p>블로그에 공부한 것을 기록하며 나누고 있습니다.</p>
-                        <p>아이콘을 클릭하면 블로그로 이동합니다.</p>
-                        <p><a href="https://liz52hz0322.tistory.com/" target="_blank">liz52hz0322.tistory.com</a></p>
-                    </div>
+                    <ul class="blog_list">
+                        <li><a href="#">[웹접근성] 웹접근성을 고려한 마크업</a></li>
+                        <li><a href="#">[SEO 검색엔진 최적화] meta 태그 사용하기</a></li>
+                        <li><a href="#">[SEO 검색엔진 최적화] 오픈 그래프(Open Graph)</a></li>
+                        <li><a href="#">[Javascript] DOM 텍스트 요소 조작하기</a></li>
+                        <li><a href="#">[Javascript] scroll 이벤트/scrollHeight/scrollTop/clientHeight</a></li>
+                        <li><a href="#">[Javascript] setInterval, clearInterval</a></li>
+                        <li><a href="#">[Javscript] 이벤트 핸들러 등록(addEventListener)</a></li>
+                        <li><a href="#">[Javascript] html 생성하기(createElement, insertAdjacentHTML)</a></li>
+                        <li><a href="https://liz52hz0322.tistory.com/category/HTML%20%26%20CSS/SASS%28SCSS%29?page=1" target="_blank">[Sass/SCSS] SCSS 공부 기록</a></li>
+                        
+                    </ul>
                 </div>
-                <ul class="blog_list">
-                    <li><a href="#">[웹접근성] 웹접근성을 고려한 마크업</a></li>
-                    <li><a href="#">[SEO 검색엔진 최적화] meta 태그 사용하기</a></li>
-                    <li><a href="#">Sass/SCSS 혼자 공부하기</a></li>
-                    <li><a href="#">[Javascript] DOM 텍스트 요소 조작하기</a></li>
-                    <li><a href="#">[Javascript] 이벤트 타입 종류</a></li>
-                    <li><a href="#">[Javscript]이벤트 핸들러 등록하기</a></li>
-                </ul>
             </div>
         </section>
         <!-- Comment -->
@@ -500,60 +506,62 @@
             <div class="inner">
                 <h2 class="title yellow">Comment</h2>
                 <h3 class="title_kr">주변 사람이 생각하는  저의 모습을 담았습니다.</h3>
-                <ul class="comment_list">
-                    <li>
-                        <p class="comment_box">
-                            대학 시절 '현대인문세미나' 수업에서 조별 과제를 함께한 기억이 있다.
-                            소영이가 리더 역할을 톡톡히 해준 덕분에 소극적이었던 팀원들도 학기가 끝날 때쯤에는 편안한 분위기에서 자유롭게 의견을 나눌 수 있었다. 
-                            기본적으로 공동체에 선한 영향을 미치는 것에서 자부심과 행복을 느끼는 타입인 듯하다.
-                            목표지향적이며 질서정연함에도 따뜻한 인간미가 느껴지는 친구.
-                            사람에 대한 직관을 바탕으로 목표로 향하는 가장 온건한 길을 찾는 친구.
-                        </p>
-                        <p class="comment_author">석*아</p>
-                        <p class="comment_role">에디터/대학교 동기</p>
-                    </li>
-                    <li>
-                        <p class="comment_box">
-                            다재다능하다. 공부도 잘하고 예체능도 잘하고 말도 잘하고 주변 사람들과 잘 어울린다. 조별 수업 때나 학교 축제에서 리더 역할을 많이 했다.
-                            그런데 이게 타고난 것 이상으로 본인이 얼마나 노력 하는지 알기 때문에 더 대단하고 멋있어보인다.
-                        </p>
-                        <p class="comment_author">이*지</p>
-                        <p class="comment_role">회계팀 사원/중학교 동문</p>
-                    </li>
-                    <li>
-                        <p class="comment_box">
-                            눈으로 먹는 비타민! 매사에 긍정적이고 자기계발에 열정적인
-                            친구라 보기만 해도 해피력이 전파되고 나도 발전할 수 있도록
-                            옆에서 자극을 준다. 첫째라 그런지 책임감이 강하고 독립적이다.
-                        </p>
-                        <p class="comment_author">박*현</p>
-                        <p class="comment_role">공무원/중학교 동문</p>
-                    </li>
-                    <li>
-                        <p class="comment_box">
-                            차가운 머리와 따뜻한 마음을 모두 가진 친구입니다. 할 일을 멋지게 해내는
-                            모습에 감탄하고 해맑은 미소와 따스한 마음에 감동하게 되는 친구입니다.
-                            영감과 감동을 모두 주는, 오래오래 응원하고 싶은 사람.
-                        </p>
-                        <p class="comment_author">김*윤</p>
-                        <p class="comment_role">대학원생/고등학교 동문</p>
-                    </li>
-                </ul>
+                <div class="swiper mySwiper comment_list sans-li">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="comment_box">
+                                대학 시절 '현대인문세미나' 수업에서 조별 과제를 함께한 기억이 있다. <br class="mo">
+                                소영이가 리더 역할을 톡톡히 해준 덕분에 소극적이었던 팀원들도 학기가 끝날 때쯤에는 편안한 분위기에서 자유롭게 의견을 나눌 수 있었다. 
+                                기본적으로 공동체에 선한 영향을 미치는 것에서 자부심과 행복을 느끼는 타입인 듯하다. <br class="mo">
+                                목표지향적이며 질서정연함에도 따뜻한 인간미가 느껴지는 친구.
+                                사람에 대한 직관을 바탕으로 목표로 향하는 가장 온건한 길을 찾는 친구.
+                            </p>
+                            <p class="commenter">석*아 <br> 에디터 / 대학교 동기</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="comment_box">
+                                다재다능하다. 조별 수업 때나 학교 축제에서 조장을 많이 했다. <br class="mo"> 공부도 잘하고 예체능도 잘하고 말도 잘하고 주변 사람들과 잘 어울린다. 
+                                <br class="mo">
+                                그런데 이게 타고난 것 이상으로 본인이 얼마나 노력 하는지 알기 때문에 더 대단하고 멋있어 보인다.
+                            </p>
+                            <p class="commenter">이*지 <br> 회계팀 사원/ 중학교 동문</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="comment_box">
+                                눈으로 먹는 비타민! 
+                                <br class="mo">매사에 긍정적이고 자기계발에 열정적인
+                                친구라 보기만 해도 해피력이 전파되고 나도 발전할 수 있도록
+                                옆에서 자극을 준다. 첫째라 그런지 책임감이 강하고 독립적이다.
+                            </p>
+                            <p class="commenter">박*현 <br> 공무원 / 중학교 동문</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="comment_box">
+                                차가운 머리와 따뜻한 마음을 모두 가진 친구입니다. 
+                                <br class="mo">할 일을 멋지게 해내는
+                                모습에 감탄하고 해맑은 미소와 따스한 마음에 감동하게 되는 친구입니다.
+                                영감과 감동을 모두 주는, 오래오래 응원하고 싶은 사람.
+                            </p>
+                            <p class="commenter">김*윤 <br> 대학원생 / 고등학교 동문</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
         <!-- footer -->
         <footer>
-            <div class="thx_para">
+            <div class="thx_para mon-bd">
                 THANK YOU FOR YOUR VISIT!
             </div>
             <div class="footer_inner">
                 <div class="contact-l">
-                    <p class="contact_title">
+                    <p class="contact_title mon-bd">
                         LET'S <br class="mo">GET IN<br class="mo"><span class="yellow">TOUCH!</span>
                     </p>
                 </div>
                 <div class="contact-2">
-                    <p class="contact_txt">
+                    <p class="contact_txt sans-li">
                         꾸준히 성장하는 유능한 인재를 원하신다면 <br>
                         책임감 있는 인재를 원하신다면 <br>
                         조직에 활력을 불어 넣는 인재를 원하신다면 <br>
@@ -561,8 +569,8 @@
                     <!-- line -->
                     <span class="contact_line"></span>
                     <div class="contact_adr">
-                        <p class="e-mail">whthdud4356@naver.com</p>
-                        <p class="phone">010. 8865. 7865</p>
+                        <p class="e-mail mon-md">whthdud4356@naver.com</p>
+                        <p class="phone mon-md">010. 8865. 7865</p>
                         <ul class="sns">
                             <li>
                                 <a href="#">
@@ -585,7 +593,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright">ⓒ2023 .soyoung</p>
+                        <p class="copyright sans-li">ⓒ2023 .soyoung</p>
                     </div>
                 </div>
             </div>

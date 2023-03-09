@@ -11,7 +11,7 @@
 }
 @mixin sec{
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     margin-bottom: 100px;
     
 }
@@ -60,7 +60,7 @@
 header{
     width: 100%;
     height:100px;
-    background: #000;
+    background: v.$bg-color;
     position:fixed;
     top:0;
     left:0;
@@ -103,7 +103,7 @@ header{
                 cursor:pointer;
                 i{
                     font-size:36px;
-                    color:#fff;
+                    color:v.$basic-color;
                 }
                 
             }
@@ -119,9 +119,9 @@ header{
         top:0;
         right:0;
         z-index:100;
-        background: #000;
+        background: v.$bg-color;
         .gnb_open_list{
-            color:#fff;
+            color:v.$basic-color;
             position:absolute;
             top:50%;
             left: 40%;
@@ -179,6 +179,7 @@ section{
 /*메인 섹션*/
 main{
     @include sec;
+    overflow: hidden;
     margin-top:100px;
     .inner{
         @include sec_inner;
@@ -297,6 +298,7 @@ main{
 
 /*About*/
 .about{
+    overflow: hidden;
     .inner{
         .about_left{
             float:left;
@@ -332,6 +334,7 @@ main{
 
 /*skill*/
 .skill{
+    overflow:hidden;
     .inner{
         .skill_container{
             width: 90%;
@@ -353,14 +356,14 @@ main{
                 background: rgba(255,255,255,0.5);
                 z-index:100;
                 .skill_modal_container{
-                    background: #000;
+                    background: v.$bg-color;
                     width: 50%;
                     height: 50vh;
                     position:absolute;
                     top:25%;
                     left: 25%;
                     border-radius:40px;
-                    color:#000;
+                    color:v.$bg-color;
                     .skill_modal_box{
                         padding: 85px 95px;
                         .skill_modal_title{
@@ -417,6 +420,7 @@ main{
 
 /*work gallery 이미지 슬라이더*/
 .work{
+    overflow: hidden;
     .inner{
         .slide-wrapper{
             width: 100%;
@@ -511,26 +515,53 @@ main{
 .blog{
     .inner{
         .title{
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
-        .blog_icon{
-            float:left;
-            position: sticky;
-            top:50%;
-            background: blue;
-            .blog_img{
-                width: 200px;
-                height: 200px;
-                a{
-                    @include a_full;
-                    img{
-                        width: 100%;
+        .blog_content{
+            // background: red;
+            height: 1250px;
+            box-sizing: border-box;
+            .blog_icon{
+                // background: blue;
+                width: 30%;
+                float:left;
+                position:sticky;
+                position:-webkit-sticky;
+                top:300px;
+                .blog_img{
+                    width: 150px;
+                    height: 150px;
+                    margin:0 auto 30px;
+                    a{
+                        @include a_full;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .blog_desc{
+                    font-size: nth(v.$font-size, 2);
+                    text-align: center;
+                    line-height: 1.4;
+                }
+            }
+            .blog_list{
+                // background: teal;
+                width: 70%;
+                float:right;
+                li{
+                    padding: 20px;
+                    margin: 20px;
+                    margin-bottom: 80px;
+                    a{
+                        @include a_full;
+                        font-family: 'Noto Sans KR', sans-serif;
+                        font-weight: 300;
+                        font-size:nth(v.$font-size, 2);
+                        text-align: center;
                     }
                 }
             }
-        }
-        .blog_list{
-            background: red;
         }
     }
 }
@@ -539,7 +570,105 @@ main{
     .inner{
         .comment_list{
             @include align;
+            flex-wrap:wrap;
+            /*swiper.js*/
+            .swiper-slide{
+                width: 70%;
+                padding: 40px;
+                margin:0 20px 60px 0;
+                box-sizing: border-box;
+                border:1px solid v.$basic-color;
+                border-radius: 40px;
+                position:relative;
+                .comment_box{
+                    font-size: nth(v.$font-size,2);
+                    margin-bottom: 10%;
+                    line-height: 1.5;
+                }
+                .commenter{
+                    position:absolute;
+                    bottom:8%;
+                    left:6%;
+                    line-height: 1.5;
+                    font-size: nth(v.$font-size,1);
+                    font-weight:400;
+                }
+                &.swiper-slide-active{
+                    transition: all 0.4s ease;
+                    
+                }
+            }
         }
     }
 }
 
+/*footer*/
+footer{
+    width: 100%;
+    .thx_para{
+        width: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        background: v.$point-color;
+        font-size:nth(v.$font-size,5);
+        color:v.$bg-color;
+        text-align: center;
+    }
+    .footer_inner{
+        width: 1760px;
+        padding: 30px 0;
+        box-sizing:border-box;
+        margin:0 auto;
+        display:flex;
+        .contact-l{
+            width: 40%;
+            background: blue;
+            .contact_title{
+                font-size: nth(v.$font-size, 7);
+                line-height: 1.1;
+            }
+        }
+        .contact-2{
+            width: 60%;
+            background: green;
+            .contact_txt{
+                font-size:nth(v.$font-size,2);
+                line-height: 1.3;
+            }
+            .contact_line{
+                width:100%;
+                height:1px;
+                background: v.$basic-color;
+            }
+            .contact_adr{
+                background: aqua;
+                .e-mail, .phone{
+                    font-size: nth(v.$font-size,5);
+                }
+                .sns{
+                    @include align;
+                    float:left;
+                    li{
+                        width: 42px;
+                        height: 42px;
+                        margin-right: 20px;
+                        &:nth-child(4){
+                            width: 45px;
+                            height: 45px;
+                            transform: translate(0,5px);
+                        }
+                        a{
+                            @include a_full;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .copyright{
+                    float:right;
+                }
+            }
+        }
+    }
+}

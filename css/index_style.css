@@ -109,7 +109,6 @@ header .header_inner .gnb_open_btn i {
 /*섹션 공통*/
 section {
   width: 100%;
-  overflow: hidden;
   margin-bottom: 100px;
 }
 section .inner {
@@ -133,8 +132,8 @@ section .inner .title_kr {
 /*메인 섹션*/
 main {
   width: 100%;
-  overflow: hidden;
   margin-bottom: 100px;
+  overflow: hidden;
   margin-top: 100px;
 }
 main .inner {
@@ -256,6 +255,9 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   }
 }
 /*About*/
+.about {
+  overflow: hidden;
+}
 .about .inner .about_left {
   float: left;
   width: 50%;
@@ -288,6 +290,9 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 }
 
 /*skill*/
+.skill {
+  overflow: hidden;
+}
 .skill .inner .skill_container {
   width: 90%;
   display: flex;
@@ -368,6 +373,9 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 }
 
 /*work gallery 이미지 슬라이더*/
+.work {
+  overflow: hidden;
+}
 .work .inner .slide-wrapper {
   width: 100%;
   overflow-x: hidden;
@@ -462,31 +470,158 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 
 /*section blog*/
 .blog .inner .title {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
-.blog .inner .blog_icon {
+.blog .inner .blog_content {
+  height: 1250px;
+  box-sizing: border-box;
+}
+.blog .inner .blog_content .blog_icon {
+  width: 30%;
   float: left;
   position: sticky;
-  top: 50%;
-  background: blue;
+  position: -webkit-sticky;
+  top: 300px;
 }
-.blog .inner .blog_icon .blog_img {
-  width: 200px;
-  height: 200px;
+.blog .inner .blog_content .blog_icon .blog_img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
 }
-.blog .inner .blog_icon .blog_img a {
+.blog .inner .blog_content .blog_icon .blog_img a {
   width: 100%;
   height: 100%;
   display: block;
 }
-.blog .inner .blog_icon .blog_img a img {
+.blog .inner .blog_content .blog_icon .blog_img a img {
   width: 100%;
 }
-.blog .inner .blog_list {
-  background: red;
+.blog .inner .blog_content .blog_icon .blog_desc {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+.blog .inner .blog_content .blog_list {
+  width: 70%;
+  float: right;
+}
+.blog .inner .blog_content .blog_list li {
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 80px;
+}
+.blog .inner .blog_content .blog_list li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
 }
 
 .comment .inner .comment_list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  /*swiper.js*/
+}
+.comment .inner .comment_list .swiper-slide {
+  width: 70%;
+  padding: 40px;
+  margin: 0 20px 60px 0;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  position: relative;
+}
+.comment .inner .comment_list .swiper-slide .comment_box {
+  font-size: 18px;
+  margin-bottom: 10%;
+  line-height: 1.5;
+}
+.comment .inner .comment_list .swiper-slide .commenter {
+  position: absolute;
+  bottom: 8%;
+  left: 6%;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+.comment .inner .comment_list .swiper-slide.swiper-slide-active {
+  transition: all 0.4s ease;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+}
+footer .thx_para {
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  background: #ffd500;
+  font-size: 64px;
+  color: #000;
+  text-align: center;
+}
+footer .footer_inner {
+  width: 1760px;
+  padding: 30px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+}
+footer .footer_inner .contact-l {
+  width: 40%;
+  background: blue;
+}
+footer .footer_inner .contact-l .contact_title {
+  font-size: 150px;
+  line-height: 1.1;
+}
+footer .footer_inner .contact-2 {
+  width: 60%;
+  background: green;
+}
+footer .footer_inner .contact-2 .contact_txt {
+  font-size: 18px;
+  line-height: 1.3;
+}
+footer .footer_inner .contact-2 .contact_line {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+footer .footer_inner .contact-2 .contact_adr {
+  background: aqua;
+}
+footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
+  font-size: 64px;
+}
+footer .footer_inner .contact-2 .contact_adr .sns {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li {
+  width: 42px;
+  height: 42px;
+  margin-right: 20px;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li:nth-child(4) {
+  width: 45px;
+  height: 45px;
+  transform: translate(0, 5px);
+}
+footer .footer_inner .contact-2 .contact_adr .sns li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li a img {
+  width: 100%;
+}
+footer .footer_inner .contact-2 .contact_adr .copyright {
+  float: right;
 }/*# sourceMappingURL=index_style.css.map */
