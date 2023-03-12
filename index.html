@@ -23,7 +23,7 @@
                     </a>
                 </h1>
                 <nav class="mon-rg" aria-label="로컬 내비게이션" title="로컬 내비게이션">
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about" onclick="scrollToSec('#about');">About</a></li>
                     <li><a href="#skill">Skill</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#blog">Blog</a></li>
@@ -36,7 +36,7 @@
                     </button>
                     <div class="gnb_open">
                         <ul class="gnb_open_list mon-bd">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="#">Work Gallery</a></li>
                             <li><a href="#">Portfolio Making</a></li>
                         </ul>
@@ -61,8 +61,8 @@
                     <h2>Better <span class="yellow">Life</span>.</h2>
                 </div>
                 <div class="introduction">
-                    <div class="intro_img" id="profile_img">
-                        <img  src="img/profile_black.png" alt="프로필 이미지 사진">
+                    <div class="intro_img" onmouseover="changeImg();" onmouseout="restoreImg();">
+                        <img id="profile_img" src="img/profile_black.png" alt="프로필 이미지 사진">
                     </div>
                     <div class="intro_txt">
                         <h2 class="sans-bd">안녕하세요! <br class="mo">더 나은 웹을 추구하는 조소영입니다.</h2>
@@ -148,7 +148,7 @@
                             <li>장점: 계획적이며 실행력이 좋다. / 프로독학러 / 습득력이 빠르다. / 친화력이 좋다.</li>
                             <li>단점: 뭐든지 완벽하게 하고 싶어한다.</li>
                             <li>회사에서 나는 : “꾸준히 성장하며 배운 것을 팀원들과 나누는, 신뢰받는 팀원”</li>
-                            <li>좌우명: 위기는 기회일 수 있다.</li>
+                            <li>좌우명: 배움은 나누기 위한 것이다.</li>
                         </ul>
                     </div>
                     <div class="experience box">

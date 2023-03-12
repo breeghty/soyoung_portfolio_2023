@@ -558,7 +558,7 @@ footer {
 }
 footer .thx_para {
   width: 100%;
-  padding: 50px;
+  padding: 35px;
   box-sizing: border-box;
   background: #ffd500;
   font-size: 64px;
@@ -567,14 +567,13 @@ footer .thx_para {
 }
 footer .footer_inner {
   width: 1760px;
-  padding: 30px 0;
+  padding: 155px 0;
   box-sizing: border-box;
   margin: 0 auto;
   display: flex;
 }
 footer .footer_inner .contact-l {
   width: 40%;
-  background: blue;
 }
 footer .footer_inner .contact-l .contact_title {
   font-size: 150px;
@@ -582,22 +581,23 @@ footer .footer_inner .contact-l .contact_title {
 }
 footer .footer_inner .contact-2 {
   width: 60%;
-  background: green;
+  transform: translate3d(0, 5%, 0);
 }
 footer .footer_inner .contact-2 .contact_txt {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.3;
+  margin-bottom: 40px;
 }
 footer .footer_inner .contact-2 .contact_line {
   width: 100%;
   height: 1px;
+  display: block;
+  margin-bottom: 40px;
   background: #fff;
-}
-footer .footer_inner .contact-2 .contact_adr {
-  background: aqua;
 }
 footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
   font-size: 64px;
+  margin-bottom: 40px;
 }
 footer .footer_inner .contact-2 .contact_adr .sns {
   display: flex;
@@ -624,4 +624,5 @@ footer .footer_inner .contact-2 .contact_adr .sns li a img {
 }
 footer .footer_inner .contact-2 .contact_adr .copyright {
   float: right;
+  transform: translate(0, 150%);
 }/*# sourceMappingURL=index_style.css.map */

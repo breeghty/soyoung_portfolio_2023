@@ -7,8 +7,21 @@ document.querySelector('.gnb .gnb_open .gnb_close').addEventListener('click',fun
     gnbOpen.classList.remove('on');
 });
 
-/*main 마우스 호버하면 프로필 사진 변경*/ 
+/*클릭하면 해당 영역으로 이동하기*/
+function scrollToSec(id) {
+    const section = document.querySelector(id);
+    section.scrollIntoView({behavior: 'smooth'});
+    console.log('success');
+}
 
+
+/*main 마우스 호버하면 프로필 사진 변경*/ 
+function changeImg(){
+    document.getElementById('profile_img').src='img/profile_color.png';
+}
+function restoreImg() {
+    document.getElementById("profile_img").src = "img/profile_black.png";
+}
 
 /*skill 섹션 모달창 내용 바꾸기*/
 
@@ -199,3 +212,23 @@ let num= 1;
                 }
             }
         });
+
+        const body = document.body,
+        scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+        height = scrollWrap.getBoundingClientRect().height - 1,
+        speed = 0.04;
+
+    var offset = 0;
+
+    body.style.height = Math.floor(height) + "px";
+
+    function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+
+        var scroll = "translateY(-" + offset + "px) translateZ(0)";
+        scrollWrap.style.transform = scroll;
+
+        callScroll = requestAnimationFrame(smoothScroll);
+    }
+
+    smoothScroll();
