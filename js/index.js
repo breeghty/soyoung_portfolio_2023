@@ -1,3 +1,4 @@
+
 //menubar menuopen, nav 사라짐
 let gnbOpen = document.querySelector('.gnb .gnb_open');
 document.querySelector('.gnb .gnb_open_btn').addEventListener('click',function(){
@@ -7,20 +8,47 @@ document.querySelector('.gnb .gnb_open .gnb_close').addEventListener('click',fun
     gnbOpen.classList.remove('on');
 });
 
-/*클릭하면 해당 영역으로 이동하기*/
-function scrollToSec(id) {
-    const section = document.querySelector(id);
-    section.scrollIntoView({behavior: 'smooth'});
-    console.log('success');
+/*클릭하면 해당 영역으로 부드럽게 스크롤하여 이동하기*/
+function smoothScroll(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute('href');
+    const targetElem = document.querySelector(targetId);
+    const targetOffset = targetElem.offsetTop;
+    window.scroll({
+        top: targetOffset,
+        behavior: 'smooth'
+    });
 }
+
+/*스크롤하면 해당 영역 nav link active*/
+
+const sectionLink = document.querySelectorAll('section');
+const navLink = document.querySelectorAll('nav li a');
+//console.log(`섹션의 개수는 ${sectionLink.length}`);
+//console.log(`nav li a의 개수는 ${navLink.length}`);
+let observer = new IntersectionObserver((e)=>{
+    e.forEach((section,n)=>{
+        if(section.isIntersecting){
+            navLink[0].classList.add('active');
+        }else{
+            navLink[0].classList.remove('active');
+        }
+        // box.intersectionratio//화면에 해당 요소가 몇 퍼센트 보이는지 표시해준다.
+    })
+});
+observer.observe(sectionLink[0]);
+observer.observe(sectionLink[1]);
 
 
 /*main 마우스 호버하면 프로필 사진 변경*/ 
+const profileImg = document.getElementById('profile_img');
 function changeImg(){
-    document.getElementById('profile_img').src='img/profile_color.png';
+    profileImg.src='img/profile_color.png';
+    profileImg.transition="all 1s ease";
 }
 function restoreImg() {
-    document.getElementById("profile_img").src = "img/profile_black.png";
+    profileImg.src = "img/profile_black.png";
+    profileImg.transition="all 1s ease";
 }
 
 /*skill 섹션 모달창 내용 바꾸기*/
@@ -111,124 +139,122 @@ function scrollMarquee(){
 
 window.addEventListener('scroll', scrollMarquee);
 
+
 /*work gallery_img slider */
 
+/*버튼 누르면 해당 슬라이드로 이동*/
 let num= 1;
-        let slideBox = document.getElementById('slideBox');
+let move_x;
+const slideBox = document.getElementById('slideBox');
+const slideBtn = document.querySelectorAll('.slideBtn');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+/*console.log(slideBtn.length);*/
 
-        document.querySelector('.slide-1').addEventListener('click',function(){
-        slideBox.style.transform = 'translateX(0vw)';
-            num=1;
-            console.log(num);
-            
+for(let i = 1;i<=slideBtn.length;i++){
+    document.querySelector(`.slide-${i}`).addEventListener('click',function(){
+        move_x = -100*i + 100;
+        slideBox.style.transform = `translateX(${move_x}vw)`;
+        slideBox.style.transition = 'all 1s ease';
+            num=i;
+            console.log(`${i}번 슬라이드입니다.`);
         });
-         // 2번 슬라이드로
-        document.querySelector('.slide-2').addEventListener('click',function(){
-            
+}
+/*다음버튼*/
+nextBtn.addEventListener('click',function(){
+    if(num==1){
         slideBox.style.transform = 'translateX(-100vw)';
-            num=2;
-            console.log(num);
-            
-        });
-
-         // 3번 슬라이드로
-        document.querySelector('.slide-3').addEventListener('click',function(){
-            slideBox.style.transform = 'translateX(-200vw)';
-            num=3;
-            console.log(num);
-        });
-         // 4번 슬라이드로
-        document.querySelector('.slide-4').addEventListener('click',function(){
-            slideBox.style.transform = 'translateX(-300vw)';
-            num=4;
-            console.log(num);
-        });
-         // 5번 슬라이드로
-        document.querySelector('.slide-5').addEventListener('click',function(){
-            slideBox.style.transform = 'translateX(-400vw)';
-            num=5;
-            console.log(num);
-        });
-         // 6번 슬라이드로
-        document.querySelector('.slide-6').addEventListener('click',function(){
-            slideBox.style.transform = 'translateX(-500vw)';
-            num=6;
-            console.log(num);
-        });
-
-        // 다음버튼
-        document.querySelector('.next').addEventListener('click',function(){
-            if(num==1){
-                slideBox.style.transform = 'translateX(-100vw)';
-                num=2;
-            }else if(num==2){
-                slideBox.style.transform = 'translateX(-200vw)';
-                num=3;
-            }else if(num ==3){
-                slideBox.style.transform = 'translateX(0vw)';
-                num=1;
-                
-            }
-            
-        });
-        //이전버튼
-        document.querySelector('.prev').addEventListener('click',function(){
-            if(num==1){
-                slideBox.style.transform = 'translateX(-200vw)';
-                num=3;
-            }else if(num==2){
-                slideBox.style.transform = 'translateX(0vw)';
-                num=1;
-            }else if(num ==3){
-                slideBox.style.transform = 'translateX(-100vw)';
-                num=2;
-                
-            }
-        });
-
-
-        // Comment swiper.js
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            autoplay: {
-                delay: 5500,
-                disableOnInteraction: true,//스와이프 후 자동재생.
-            },
-            loop:false,
-            spaceBetween: 50,
-            centeredSlides: true,
-            breakpoints:{
-                //1720px보다 클 경우
-                1720:{
-                    slidesPerView: 2,
-                    spaceBetween: 150,
-                },
-                1000:{
-                    slidesPerView: 3,
-                },
-                767:{
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                }
-            }
-        });
-
-        const body = document.body,
-        scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-        height = scrollWrap.getBoundingClientRect().height - 1,
-        speed = 0.04;
-
-    var offset = 0;
-
-    body.style.height = Math.floor(height) + "px";
-
-    function smoothScroll() {
-        offset += (window.pageYOffset - offset) * speed;
-
-        var scroll = "translateY(-" + offset + "px) translateZ(0)";
-        scrollWrap.style.transform = scroll;
-
-        callScroll = requestAnimationFrame(smoothScroll);
+        num=2;
+    }else if(num==2){
+        slideBox.style.transform = 'translateX(-200vw)';
+        num=3;
+    }else if(num==3){
+        slideBox.style.transform = 'translateX(-300vw)';
+        num=4;
+    }else if(num==4){
+        slideBox.style.transform = 'translateX(-400vw)';
+        num=5;
+    }else if(num==5){
+        slideBox.style.transform = 'translateX(-500vw)';
+        num=6;
+    }else if(num==6){
+        slideBox.style.transform = 'translateX(-600vw)';
+        num=7;
+    }else if(num==7){
+        slideBox.style.transform = 'translateX(-700vw)';
+        num=8;
+    }else if(num==8){
+        slideBox.style.transform = 'translateX(-800vw)';
+        num=9;
+    }else if(num==9){
+        slideBox.style.transform = 'translateX(-900vw)';
+        num=10;
+    }else if(num ==10){
+        slideBox.style.transform = 'translateX(0vw)';
+        num=1;
     }
+    slideBox.style.transition = 'all 1s ease';
+    
+});
+/*이전버튼*/
+prevBtn.addEventListener('click',function(){
+    if(num==1){
+        slideBox.style.transform = 'translateX(-900vw)';
+        num=10;
+    }else if(num==2){
+        slideBox.style.transform = 'translateX(0vw)';
+        num=1;
+    }else if(num==3){
+        slideBox.style.transform = 'translateX(-100vw)';
+        num=2;
+    }else if(num==4){
+        slideBox.style.transform = 'translateX(-200vw)';
+        num=3;
+    }else if(num==5){
+        slideBox.style.transform = 'translateX(-300vw)';
+        num=4;
+    }else if(num==6){
+        slideBox.style.transform = 'translateX(-400vw)';
+        num=5;
+    }else if(num==7){
+        slideBox.style.transform = 'translateX(-500vw)';
+        num=6;
+    }else if(num==8){
+        slideBox.style.transform = 'translateX(-600vw)';
+        num=7;
+    }else if(num==9){
+        slideBox.style.transform = 'translateX(-700vw)';
+        num=8;
+    }else if(num==10){
+        slideBox.style.transform = 'translateX(-800vw)';
+        num=9;   
+    }
+    slideBox.style.transition = 'all 1s ease';
+});
 
-    smoothScroll();
+
+// Comment swiper.js
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    autoplay: {
+        delay: 5500,
+        disableOnInteraction: true,//스와이프 후 자동재생.
+    },
+    loop:false,
+    spaceBetween: 50,
+    centeredSlides: true,
+    breakpoints:{
+        //1720px보다 클 경우
+        1720:{
+            slidesPerView: 2,
+            spaceBetween: 150,
+        },
+        1000:{
+            slidesPerView: 3,
+        },
+        767:{
+            slidesPerView: 2,
+            spaceBetween: 30,
+        }
+    }
+});

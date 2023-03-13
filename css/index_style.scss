@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'responsive' as r;
 
 @mixin a_full{
     width: 100%;
@@ -16,9 +17,9 @@
     
 }
 @mixin sec_inner{
-    width: 1680px;
+    width: 87.5%;
     margin:0 auto;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 @mixin title{
     font-family: 'Montserrat', sans-serif;
@@ -56,22 +57,55 @@
     font-size: 48px;
     margin-bottom: 40px;
 }
+@mixin active_a{
+    color:v.$point-color;
+    transition: all 0.5s ease;
+}
+
+/*responsive*/
+@mixin responsive_xl{
+    @media screen and (max-width:r.$break-point-xl){
+        /*1200px이하*/
+        @content;
+        
+    }
+}
+@mixin responsive_lg{
+    @media screen and (max-width:r.$break-point-lg){
+        /*992px이하*/
+        @content;
+    }
+}
+@mixin responsive_md{
+    @media screen and (max-width:r.$break-point-md){
+        /*768px이하*/
+        @content;
+    }
+}
+@mixin responsive_sm{
+    @media screen and (max-width:r.$break-point-sm){
+        /*576px이하*/
+        @content;
+    }
+}
 /*헤더*/
 header{
     width: 100%;
-    height:100px;
+    height:90px;
     background: v.$bg-color;
     position:fixed;
     top:0;
     left:0;
     z-index:100;
     .header_inner{
-        width: 1760px;
+        width:90%;
+        max-width:1760px;
         padding: 30px 0;
         position:relative;
         box-sizing:border-box;
         margin:0 auto;
         @include align;
+        align-items: center;
         .logo{
             width: 117px;
             height: 30px;
@@ -81,15 +115,24 @@ header{
             }
         }
         nav{
-            @include align;
+            // @include align;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             li{
-                width: 20%;
+                width:20%;
                 box-sizing: border-box;
-                margin:0px 20px;
+                margin:0 20px;
                 padding:10px 20px;
+                &:hover a, &:focus a, &:active a{
+                    @include active_a;
+                }
                 a{
                     @include a_full;
                     font-size: nth(v.$font-size,2);
+                    &.active{
+                        @include active_a;
+                    }
                 }
             }
         }
@@ -110,6 +153,7 @@ header{
         }
     }
 }
+
 /*클릭시 열리는 메뉴바*/
 .gnb{
     .gnb_open{
@@ -180,7 +224,7 @@ section{
 main{
     @include sec;
     overflow: hidden;
-    margin-top:100px;
+    margin-top:90px;
     .inner{
         @include sec_inner;
         position:relative;
@@ -222,6 +266,10 @@ main{
             padding:20px;
             .intro_img{
                 width: 40%;
+                &:hover, &:focus{
+                    cursor: pointer;
+                    transition: all 1s ease;
+                }
                 img{
                     width: 603px;
                     height: 744px;
@@ -431,10 +479,10 @@ main{
                 transition:all 0.5s ease;
                 .slide-box{
                     width:100vw;
-
                     float:left;
                     overflow: hidden;
                     @include align;
+                    // transition: all 1s ease;
                     .slide-img-box{
                         width: 50%;
                         img{
@@ -675,3 +723,5 @@ footer{
         }
     }
 }
+
+
