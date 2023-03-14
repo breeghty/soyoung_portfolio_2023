@@ -59,7 +59,7 @@
 }
 @mixin active_a{
     color:v.$point-color;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 /*responsive*/
@@ -132,6 +132,7 @@ header{
                     font-size: nth(v.$font-size,2);
                     &.active{
                         @include active_a;
+                        
                     }
                 }
             }
@@ -173,9 +174,13 @@ header{
             
             li{
                 margin-bottom: 40px;
+                
                 a{
                     font-size: nth(v.$font-size,6);
                     transition: all 1s;
+                    &:active,&:hover,&:focus{
+                        @include active_a;
+                    }
                 }
             }
         }
@@ -391,6 +396,9 @@ main{
                 li{
                     .btn{
                         @include skill_li;
+                        &:hover, &:focus, &:active{
+                            @include active_a;
+                        }
                     }
                 }
             }
@@ -402,7 +410,7 @@ main{
                 top:0;
                 left:0;
                 background: rgba(255,255,255,0.5);
-                z-index:100;
+                z-index:200;
                 .skill_modal_container{
                     background: v.$bg-color;
                     width: 50%;
@@ -436,14 +444,13 @@ main{
 .skill_modal{
     width: 0%;
     overflow: hidden;
-    transition: all 0.5s ease;
-    opacity: 0;
+    transition: all 0.8s ease;
     display: none;
-    &.on{
+    &.show_modal{
         width: 100%;
         left:0;
-        opacity:1;
-        transition: all 0.5s ease;
+        display:block;
+        transition: all 0.8s ease;
     }
 }
 
@@ -554,6 +561,9 @@ main{
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
                 font-size: nth(v.$font-size,1);
+                &:hover,&:active,&:focus{
+                    @include active_a;
+                }
             }
         }
     }
@@ -601,6 +611,9 @@ main{
                     padding: 20px;
                     margin: 20px;
                     margin-bottom: 80px;
+                    &:hover, &:focus, &:active{
+                        @include active_a;
+                    }
                     a{
                         @include a_full;
                         font-family: 'Noto Sans KR', sans-serif;

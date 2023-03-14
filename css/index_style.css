@@ -44,7 +44,7 @@ header .header_inner nav li {
 }
 header .header_inner nav li:hover a, header .header_inner nav li:focus a, header .header_inner nav li:active a {
   color: #ffd500;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 header .header_inner nav li a {
   width: 100%;
@@ -54,7 +54,7 @@ header .header_inner nav li a {
 }
 header .header_inner nav li a.active {
   color: #ffd500;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 header .header_inner .gnb_open_btn {
   width: 50px;
@@ -92,6 +92,10 @@ header .header_inner .gnb_open_btn i {
 .gnb .gnb_open .gnb_open_list li a {
   font-size: 128px;
   transition: all 1s;
+}
+.gnb .gnb_open .gnb_open_list li a:active, .gnb .gnb_open .gnb_open_list li a:hover, .gnb .gnb_open .gnb_open_list li a:focus {
+  color: #ffd500;
+  transition: all 0.2s ease;
 }
 .gnb .gnb_open .gnb_close {
   width: 65px;
@@ -321,6 +325,10 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   font-size: 48px;
   margin-bottom: 40px;
 }
+.skill .inner .skill_container ul li .btn:hover, .skill .inner .skill_container ul li .btn:focus, .skill .inner .skill_container ul li .btn:active {
+  color: #ffd500;
+  transition: all 0.2s ease;
+}
 .skill .inner .skill_container .skill_modal {
   width: 100%;
   height: 100vh;
@@ -328,7 +336,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.5);
-  z-index: 100;
+  z-index: 200;
 }
 .skill .inner .skill_container .skill_modal .skill_modal_container {
   background: #000;
@@ -358,15 +366,14 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .skill_modal {
   width: 0%;
   overflow: hidden;
-  transition: all 0.5s ease;
-  opacity: 0;
+  transition: all 0.8s ease;
   display: none;
 }
-.skill_modal.on {
+.skill_modal.show_modal {
   width: 100%;
   left: 0;
-  opacity: 1;
-  transition: all 0.5s ease;
+  display: block;
+  transition: all 0.8s ease;
 }
 
 /*pers_scroll*/
@@ -483,6 +490,10 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   font-weight: 400;
   font-size: 16px;
 }
+.work .inner .btn_container button:hover, .work .inner .btn_container button:active, .work .inner .btn_container button:focus {
+  color: #ffd500;
+  transition: all 0.2s ease;
+}
 
 /*section blog*/
 .blog .inner .title {
@@ -525,6 +536,10 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   padding: 20px;
   margin: 20px;
   margin-bottom: 80px;
+}
+.blog .inner .blog_content .blog_list li:hover, .blog .inner .blog_content .blog_list li:focus, .blog .inner .blog_content .blog_list li:active {
+  color: #ffd500;
+  transition: all 0.2s ease;
 }
 .blog .inner .blog_content .blog_list li a {
   width: 100%;

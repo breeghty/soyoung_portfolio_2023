@@ -1,3 +1,8 @@
+document.addEventListener('click', function(e) {
+    if (e.target.matches('a[href="#"]')) {
+        e.preventDefault();
+    }
+});
 
 //menubar menuopen, nav 사라짐
 let gnbOpen = document.querySelector('.gnb .gnb_open');
@@ -26,18 +31,81 @@ const sectionLink = document.querySelectorAll('section');
 const navLink = document.querySelectorAll('nav li a');
 //console.log(`섹션의 개수는 ${sectionLink.length}`);
 //console.log(`nav li a의 개수는 ${navLink.length}`);
-let observer = new IntersectionObserver((e)=>{
-    e.forEach((section,n)=>{
-        if(section.isIntersecting){
-            navLink[0].classList.add('active');
-        }else{
-            navLink[0].classList.remove('active');
-        }
-        // box.intersectionratio//화면에 해당 요소가 몇 퍼센트 보이는지 표시해준다.
-    })
-});
-observer.observe(sectionLink[0]);
-observer.observe(sectionLink[1]);
+
+//섹션의 위치값을 저장
+let section_ab = sectionLink[0].offsetTop;
+let section_sk = sectionLink[1].offsetTop;
+let section_wr = sectionLink[2].offsetTop;
+let section_lg = sectionLink[3].offsetTop;
+let section_cm = sectionLink[4].offsetTop;
+let footer_top = document.querySelector('footer').offsetTop;
+
+
+/*active 된 nav li a의 active 클래스 해제*/ 
+function nav_active_reset(){
+    for(let k=0;k<navLink.length;k++){
+        navLink[k].classList.remove('active');
+    }
+}
+/*스크롤 이벤트에 대한 핸들러 함수*/
+function handleScrollEvent() {
+    /*스크롤 위치값 변수*/
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // 리사이즈 이벤트가 끝나면 페이지를 새로고침하도록 설정
+    let delay = 300;
+    let timer = null;
+    if (window.innerWidth > 500) {
+        window.addEventListener('resize', function() {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                location.reload();
+            }, delay);
+        });
+    }
+
+    // 현재 스크롤 위치를 저장하여 페이지를 새로고침했을 때 이 위치로 이동하도록 설정
+    history.scrollRestoration = "auto";
+    //main
+    if(0<=scrollTop && scrollTop<section_ab){
+        nav_active_reset();
+    }
+    // section_about
+    if (scrollTop >= section_ab) {
+        nav_active_reset();
+        navLink[0].classList.add('active');
+    }
+    // section_skill
+    if (scrollTop >= section_sk) {
+        nav_active_reset();
+        navLink[1].classList.add('active');
+    }
+    // section_work
+    if (scrollTop >= section_wr) {
+        nav_active_reset();
+        navLink[2].classList.add('active');
+    }
+    if(scrollTop >= section_lg){
+        nav_active_reset();
+        navLink[3].classList.add('active');
+    }
+    if(scrollTop >= section_cm){
+        nav_active_reset();
+        navLink[4].classList.add('active');
+    }
+    if(scrollTop>=footer_top){
+        nav_active_reset();
+    }
+
+}
+
+// 스크롤 이벤트와 리사이즈 이벤트에 대한 핸들러 함수 등록
+window.addEventListener("scroll", handleScrollEvent);
+window.addEventListener("resize", handleScrollEvent);
+
+// 페이지 로딩시 한번 실행
+handleScrollEvent();
+
 
 
 /*main 마우스 호버하면 프로필 사진 변경*/ 
@@ -52,14 +120,50 @@ function restoreImg() {
 }
 
 /*skill 섹션 모달창 내용 바꾸기*/
+const skillModal = document.querySelector('.skill_modal');
+const skillTitle = document.querySelector('.skill_modal_title');
+const skillDesc = document.querySelector('.skill_modal_desc');
+let btnNum = document.querySelectorAll('.skill_container ul li button');
 
+let skill = [
+    {id:0, title:'HTML', desc:'웹표준 준수, 웹접근성 고려한 마크업 <br>시맨틱 태그를 적절한 용도로 사용 <br>SEO 검색엔진 최적화를 위한 메타 태그를 사용<br>웹 사이트의 논리구조를 고려한 직관적인 클래스명 사용'},
+    {id:1, title:'CSS', desc:':before, :after, :hover, :focus 등의 가상 선택자 사용<br>@keyframes를 사용한 애니메이션 구현<br>@media query를 사용한 반응형웹 구현<br>디자인을 그대로 화면에 구현하는 능력<br>flex, grid 속성 사용'},
+    {id:2, title:'SCSS', desc:'@mixin, @use, @forward를 사용한 레이아웃 재사용 가능<br>nesting으로 유지보수가 쉬운 코드 작성<br>@List와 변수를 사용해 빠르고 효율적인 코드 작성<br>독학으로 포트폴리오 스타일 작성에 SCSS 전처리기 사용'},
+    {id:3, title:'Javascript', desc:'vanilla js로 DOM 조작을 통해 UI 개발 가능<br>jQuery, swiper.js, GSAP scrolltriger 등 라이브러리와 플러그인 활용 가능<br>javascript로 포트폴리오 하드코딩<br>동적인 웹 구현 가능<br>for문, 배열, 객체, 함수 문법과 같은 기본문법 활용 가능<br>ES6 문법 학습 중<br>React 사용 경험 있음'},
+    {id:4, title:'Adobe XD', desc:'UI 디자인 가능<br>XD 프로그램으로 아주대학교 병원 사이트 리뉴얼 작업<br>포토샵, 일러스트레이터와 연계작업 능숙<br>프로토타입 기능 사용'},
+    {id:5, title:'Figma', desc:'UI 디자인 가능<br>피그마로 포트폴리오 사이트 디자인<br>zeplin, fontawesome 등의 플러그인 활용 가능<br>오토 레이아웃, 컴포넌트 기능 활용<br>프로토타입 기능 사용'},
+    {id:6, title:'Photoshop', desc:'사진 편집과 이미지 보정, 펜툴 사용한 포스터 제작<br>UI 디자인 개발 툴과 연계하여 사용'},
+    {id:7, title:'Illustrator', desc:'SVG 이미지 제작<br>펜툴 사용한 일러스트 제작<br>UI 디자인 개발 툴과 연계하여 사용'},
+    {id:8, title:'Github', desc:'github와 vs code 연동, 협업 가능<br> 깃허브를 통한 코드 관리<br>깃허브를 통한 웹 호스팅<br>git add, push 등의 터미널 명령어 사용'},
+    {id:9, title:'Excel', desc:'컴퓨터 활용능력 2급 자격증 보유(2023.03.03)<br>기본적인 문서 작성과 셀 서식 사용<br>VLOOKUP, INDEX, MATCH 등의 기본함수 사용'},
+    {id:10, title:'Notion', desc:'간단한 문서 작성과 일정관리에 사용<br>문서 공유를 통한 일정관리 공유'},
+    {id:11, title:'Zeplin', desc:'피그마와 XD에서 만든 UI 디자인을 연동하여 퍼블리싱에 참고해 작업'},
+]
+
+/**모달창 열고 닫기 */
+
+// 모달창 열고 누르는 버튼마다 내용 변경하기
+for(let n=0;n<btnNum.length;n++){
+    document.getElementById(`btn${n+1}`).addEventListener('click',function(){
+        skillModal.classList.add('show_modal');
+        skillTitle.innerHTML = skill[n].title;
+        skillDesc.innerHTML = skill[n].desc;
+    });
+}
+//내가 실제로 누른 게 .skill-modal_container일 때만 모달창 닫기
+document.querySelector('html').addEventListener('click',function(e){
+    
+    if(e.target == skillModal){
+        skillModal.classList.remove('show_modal');
+    }
+});
 
 /*pers_scroll섹션 */
 const en_text = document.querySelector('.en_text');
 const kr_text = document.querySelector('.kr_text');
 
-var text1 = 'Positive Planning Confident Diligent Cooperative Growing'.split(' ');
-var text2 = '긍 정 계 획 자 신 감 성 실 함 협 력 성 장 꾸 준 함 책 임 감'.split(' ');
+let text1 = 'Positive Planning Confident Diligent Cooperative Growing'.split(' ');
+let text2 = '긍 정 계 획 자 신 감 성 실 함 협 력 성 장 꾸 준 함 책 임 감'.split(' ');
 
 // 문자열을 split 메소드를 이용해 나눠준다. 스페이스바를 기준으로 단어 네개가 나눠지고 text1 배열이 생성된다.
 // text1=['passionate', 'Growing', 'Receptive', 'Challengin']
