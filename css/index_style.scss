@@ -65,14 +65,14 @@
 /*responsive*/
 @mixin responsive_xl{
     @media screen and (max-width:r.$break-point-xl){
-        /*1200px이하*/
+        /*1400px이하*/
         @content;
         
     }
 }
 @mixin responsive_lg{
     @media screen and (max-width:r.$break-point-lg){
-        /*992px이하*/
+        /*1024이하*/
         @content;
     }
 }
@@ -84,7 +84,7 @@
 }
 @mixin responsive_sm{
     @media screen and (max-width:r.$break-point-sm){
-        /*576px이하*/
+        /*500px이하*/
         @content;
     }
 }
@@ -291,6 +291,8 @@ main{
                 img{
                     width: 603px;
                     height: 744px;
+                    //max-width:100%;
+                    //height:auto;
                     display: block;
                 }
             }
@@ -528,7 +530,7 @@ main{
                         
                         .subIcon{
                             @include align;
-                            width: 30%;
+                            width: 50%;
                             margin-top: 45px;
                             
                             li{
@@ -552,6 +554,7 @@ main{
                                     width: 35px;
                                     height: 46px;
                                 }
+                                margin-right: 1vw;
                                 a{
                                     @include a_full;
                                     img{
@@ -705,7 +708,7 @@ footer{
             width: 60%;
             transform: translate3d(0,5%,0);
             .contact_txt{
-                font-size:nth(v.$font-size,3);
+                font-size:20px;
                 line-height: 1.3;
                 margin-bottom: v.$mar-bot;
             }
