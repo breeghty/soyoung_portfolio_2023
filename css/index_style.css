@@ -104,10 +104,21 @@ header .header_inner .gnb_open_btn i {
   top: 5%;
   right: 5%;
 }
+.gnb .gnb_open .gnb_close:active, .gnb .gnb_open .gnb_close:focus, .gnb .gnb_open .gnb_close:hover {
+  animation: rotate_close 0.7s ease;
+}
 .gnb .gnb_open .gnb_close img {
   width: 100%;
 }
 
+@keyframes rotate_close {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
 /*메뉴 열고 닫기*/
 .gnb .gnb_open {
   width: 0%;
@@ -359,7 +370,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_desc {
   font-size: 20px;
   color: #fff;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /*모달창 열고닫기*/

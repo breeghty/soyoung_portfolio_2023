@@ -52,20 +52,20 @@ function handleScrollEvent() {
     /*스크롤 위치값 변수*/
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // 리사이즈 이벤트가 끝나면 페이지를 새로고침하도록 설정
-    let delay = 300;
-    let timer = null;
-    if (window.innerWidth > 500) {
-        window.addEventListener('resize', function() {
-            clearTimeout(timer);
-            timer = setTimeout(function() {
-                location.reload();
-            }, delay);
-        });
-    }
+    // // 리사이즈 이벤트가 끝나면 페이지를 새로고침하도록 설정
+    // let delay = 300;
+    // let timer = null;
+    // if (window.innerWidth > 500) {
+    //     window.addEventListener('resize', function() {
+    //         clearTimeout(timer);
+    //         timer = setTimeout(function() {
+    //             location.reload();
+    //         }, delay);
+    //     });
+    // }
 
-    // 현재 스크롤 위치를 저장하여 페이지를 새로고침했을 때 이 위치로 이동하도록 설정
-    history.scrollRestoration = "auto";
+    // // 현재 스크롤 위치를 저장하여 페이지를 새로고침했을 때 이 위치로 이동하도록 설정
+    // history.scrollRestoration = "auto";
     //main
     if(0<=scrollTop && scrollTop<section_ab){
         nav_active_reset();

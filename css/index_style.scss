@@ -88,6 +88,7 @@
         @content;
     }
 }
+
 /*헤더*/
 header{
     width: 100%;
@@ -190,11 +191,23 @@ header{
             position:absolute;
             top:5%;
             right: 5%;
+            &:active,&:focus,&:hover{
+                animation: rotate_close 0.7s ease;
+            }
             img{
                 width: 100%;
             }
         }
     }
+}
+@keyframes rotate_close {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+    
 }
 /*메뉴 열고 닫기*/
 .gnb{
@@ -431,7 +444,7 @@ main{
                         .skill_modal_desc{
                             font-size: 20px;
                             color:v.$basic-color;
-                            line-height: 1.5;
+                            line-height: 1.7;
                         }
                     }
                 }
