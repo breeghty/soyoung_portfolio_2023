@@ -60,21 +60,3 @@ li {
 	list-style: none;
 }
 
-/*기본설정*/
-
-.wrap{
-	width: 100%;
-	/* overflow: hidden; */
-    background: #000;
-    color:#fff;
-
-}
-.yellow{
-    color:#ffd500;
-}
-.btn{
-    border:none;
-    color:#fff;
-    background: transparent;
-    cursor: pointer;
-}

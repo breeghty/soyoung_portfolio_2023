@@ -1,6 +1,13 @@
 @use 'variables' as v;
 @use 'responsive' as r;
 
+$vw-viewport: 1920;
+@function get-vw($size){
+    $vw-context: $vw-viewport * 0.01 * 1px;
+    @return $size / $vw-context * 1vw;
+    @return $size;
+}
+
 @mixin a_full{
     width: 100%;
     height: 100%;
@@ -10,10 +17,14 @@
     display:flex;
     justify-content: space-between;
 }
+@mixin resImg{
+    width: 100%;
+    height:auto;
+}
 @mixin sec{
     width: 100%;
     // overflow: hidden;
-    margin-bottom: 100px;
+    margin-bottom: 5.21vw;
     
 }
 @mixin sec_inner{
@@ -25,37 +36,37 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: nth(v.$font-size,5);
-    margin-bottom: 20px;
+    margin-bottom: 1.042vw;
 }
 @mixin title_kr{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
-    font-size: 20px;
-    margin-bottom: 80px;
+    font-size: v.$font-desc;
+    margin-bottom: 4.167vw;
 }
 @mixin subTitle{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: nth(v.$font-size,4);
-    margin-bottom: 23px;
+    margin-bottom:1.198vw;
 }
 @mixin subTxt{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size:nth(v.$font-size,2);
-    margin-bottom: 15px;
+    margin-bottom: 0.781vw;
 }
 @mixin about_li{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-size: nth(v.$font-size,2);
-    margin-bottom: 15px;
+    margin-bottom: 0.781vw;
 }
 @mixin skill_li{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size: v.$font-mdtit;
+    margin-bottom: 2.083vw;
 }
 @mixin active_a{
     color:v.$point-color;
@@ -65,14 +76,14 @@
 /*responsive*/
 @mixin responsive_xl{
     @media screen and (max-width:r.$break-point-xl){
-        /*1400px이하*/
+        /*1200px이하*/
         @content;
         
     }
 }
 @mixin responsive_lg{
     @media screen and (max-width:r.$break-point-lg){
-        /*1024이하*/
+        /*992px이하*/
         @content;
     }
 }
@@ -84,11 +95,29 @@
 }
 @mixin responsive_sm{
     @media screen and (max-width:r.$break-point-sm){
-        /*500px이하*/
+        /*576px이하*/
         @content;
     }
 }
 
+/*기본설정*/
+
+.wrap{
+	width: 100%;
+	/* overflow: hidden; */
+    background: v.$bg-color;
+    color:v.$basic-color;
+	
+}
+.yellow{
+    color:v.$point-color;
+}
+.btn{
+    border:none;
+	color:v.$basic-color;
+    background: transparent;
+    cursor: pointer;
+}
 /*헤더*/
 header{
     width: 100%;
@@ -98,6 +127,7 @@ header{
     top:0;
     left:0;
     z-index:100;
+    overflow:hidden;
     .header_inner{
         width:90%;
         max-width:1760px;
@@ -186,8 +216,8 @@ header{
             }
         }
         .gnb_close{
-            width: 65px;
-            height: 65px;
+            max-width: 65px;
+            height:auto;
             position:absolute;
             top:5%;
             right: 5%;
@@ -195,7 +225,7 @@ header{
                 animation: rotate_close 0.7s ease;
             }
             img{
-                width: 100%;
+                @include resImg;
             }
         }
     }
@@ -248,12 +278,12 @@ main{
         position:relative;
         h1{
             font-size: nth(v.$font-size,7);
-            margin: 50px 256px 250px 0;
+            margin: 2.604vw 13.3vw 13.02vw 0;
             line-height: 1.1;
         }
         .rotate_text{
-            width: 160px;
-            height: 160px;
+            width: 8.33vw;
+            height: 8.33vw;
             position:absolute;
             top: 20%;
             right:10%;
@@ -263,8 +293,8 @@ main{
                 animation: rotate_txt 10s infinite linear;
             }
             .arr-down{
-                width: 45px;
-                height: 45px;
+                width: 2.34vw;
+                height: 2.34vw;
                 position:absolute;
                 top: 50%;
                 right:50%;
@@ -273,24 +303,27 @@ main{
         }
         .value{
             font-size: nth(v.$font-size,5);
-            margin-bottom: 200px;
+            margin-bottom: 10.42vw;
             h2{
-                margin-bottom: 20px;
+                margin-bottom: 1.042vw;
             }
         }
         .introduction{
             @include align;
             box-sizing: border-box;
-            padding:20px;
+            padding:1.042vw;
             .intro_img{
                 width: 40%;
+                padding: 1.302vw;
+                box-sizing: border-box;
                 &:hover, &:focus{
                     cursor: pointer;
                     transition: all 1s ease;
                 }
                 img{
-                    width: 603px;
-                    height: 744px;
+                    width:100%;
+                    max-width: 603px;
+                    height: auto;
                     //max-width:100%;
                     //height:auto;
                     display: block;
@@ -298,41 +331,47 @@ main{
             }
             .intro_txt{
                 width: 60%;
-                padding: 25px;
+                padding: 1.302vw;
+                // margin-left: 2vw;
                 box-sizing: border-box;
                 h2{
-                    font-size: 48px;
-                    margin-bottom: 45px;
+                    font-size: v.$font-mdtit;
+                    margin-bottom: v.$mar-bot_2;
                     line-height: 1.2;
                 }
                 .keyword{
                     @include align;
-                    margin-bottom: 45px;
+                    margin-bottom: v.$mar-bot_2;
                     li{
                         font-size: nth(v.$font-size, 3);
                     }
                 }
                 .intro_desc{
-                    font-size: 20px;
-                    margin-bottom: 45px;
+                    font-size: v.$font-desc;
+                    margin-bottom: v.$mar-bot_2;
                     line-height: 1.5;
                 }
                 .icon{
                     display: flex;
-                    margin-bottom: 45px;
+                    width: 50%;
+                    margin-bottom: 1.35vw;
                     li{
-                        width: 42px;
-                        height: 42px;
-                        margin-right: 20px;
+                        // width: 42px;
+                        width: 20%;
+                        height: auto;
+                        padding:0.8vw;
+                        margin-right: 1vw;
+                        box-sizing: border-box;
                         &:nth-child(4){
-                            width: 45px;
-                            height: 45px;
                             transform: translate(0,5px);
                         }
                         a{
                             @include a_full;
                             img{
+                                max-width: 45px;
                                 width: 100%;
+                                height: auto;
+
                             }
                         }
                     }
@@ -340,12 +379,12 @@ main{
                 .intro_skill{
                     .intro_skill_title{
                         font-size: nth(v.$font-size, 3);
-                        margin-bottom: 24px;
+                        margin-bottom: 1.25vw;
                     }
                     .intro_skill_list{
                         font-size: nth(v.$font-size, 2);
                         li{
-                            margin-bottom: 13px;
+                            margin-bottom: 0.67vw;
                         }
                     }
                 }
@@ -435,16 +474,23 @@ main{
                     left: 25%;
                     border-radius:40px;
                     color:v.$bg-color;
+                    overflow:auto;
+                    overscroll-behavior: contain;
+                    &::-webkit-scrollbar {
+                        display: none; /* Chrome, Safari, Opera*/
+                    }
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
                     .skill_modal_box{
-                        padding: 85px 95px;
+                        padding: 4.43vw 4.95vw;
                         .skill_modal_title{
-                            margin-bottom: 35px;
+                            margin-bottom: 1.82vw;
                             font-size: nth(v.$font-size,5);
                             color:v.$point-color; 
 
                         }
                         .skill_modal_desc{
-                            font-size: 20px;
+                            font-size: v.$font-desc;
                             color:v.$basic-color;
                             line-height: 1.7;
                         }
@@ -495,7 +541,7 @@ main{
         .slide-wrapper{
             width: 100%;
             overflow-x: hidden;
-            margin-bottom: 50px;
+            margin-bottom: 2.604vw;
             .slide-container{
                 width: 1000vw;
                 transition:all 0.5s ease;
@@ -507,22 +553,24 @@ main{
                     // transition: all 1s ease;
                     .slide-img-box{
                         width: 50%;
+                        padding: 1.03vw;
+                        box-sizing: border-box;
                         img{
-                            width: 100%;
+                            @include resImg;
                         }
                     }
                     .slide-txt-box{
                         width: 50%;
+                        padding: 2.03vw 1.03vw;
                         box-sizing: border-box;
-                        padding: 30px;
-                        margin-left: 3%;
+                        margin-left: 1vw;
                         .title{
-                            margin-bottom: 35px;
+                            margin-bottom: 1.823vw;
                             line-height: 1.5
                         }
                         .subTitle{
                             @include subTitle;
-                            margin-bottom: 35px;
+                            margin-bottom: 1.823vw;
                         }
                         .subTxt{
                             @include subTxt;
@@ -530,35 +578,38 @@ main{
                         
                         .subIcon{
                             @include align;
-                            width: 50%;
-                            margin-top: 45px;
+                            width: 38%;
+                            margin-top: 2.34vw;
                             
                             li{
+                                width:20%;
+                                margin-right: 0.5vw;
                                 &:nth-child(1){
-                                    width: 55px;
-                                    height: 50px;
+                                    width: get-vw(55px);
+                                    height: get-vw(50px);
                                 }
                                 &:nth-child(2){
-                                    width: 42px;
-                                    height: 48px;
+                                    width: get-vw(42px);
+                                    height: get-vw(48px);
                                 }
                                 &:nth-child(3){
-                                    width: 30px;
-                                    height: 46px;
+                                    width: get-vw(30px);
+                                    height: get-vw(46px);
                                 }
                                 &:nth-child(4){
-                                    width: 51px;
-                                    height: 50px;
+                                    width: get-vw(51px);
+                                    height: get-vw(50px);
                                 }
                                 &:nth-child(5){
-                                    width: 35px;
-                                    height: 46px;
+                                    width: get-vw(35px);
+                                    height: get-vw(46px);
                                 }
-                                margin-right: 1vw;
+                                
                                 a{
                                     @include a_full;
                                     img{
                                         width: 100%;
+
                                     }
                                 }
                             }
@@ -576,7 +627,7 @@ main{
                 box-sizing: border-box;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 400;
-                font-size: nth(v.$font-size,1);
+                font-size: nth(v.$font-size,2);
                 &:hover,&:active,&:focus{
                     @include active_a;
                 }
@@ -603,13 +654,15 @@ main{
                 position:-webkit-sticky;
                 top:300px;
                 .blog_img{
-                    width: 150px;
-                    height: 150px;
+                    width:7.8125vw;
+                    height:7.8125vw;
                     margin:0 auto 30px;
                     a{
                         @include a_full;
                         img{
                             width: 100%;
+                            max-width:150px;
+                            height:auto;
                         }
                     }
                 }
@@ -634,7 +687,7 @@ main{
                         @include a_full;
                         font-family: 'Noto Sans KR', sans-serif;
                         font-weight: 300;
-                        font-size:nth(v.$font-size, 2);
+                        font-size:v.$font-desc;
                         text-align: center;
                     }
                 }
@@ -650,15 +703,15 @@ main{
             flex-wrap:wrap;
             /*swiper.js*/
             .swiper-slide{
-                width: 70%;
-                padding: 40px;
-                margin:0 20px 60px 0;
+                width: 80%;
+                padding: 2.083vw;
+                margin:0 1.042vw 3.125vw 0;
                 box-sizing: border-box;
                 border:1px solid v.$basic-color;
                 border-radius: 40px;
                 position:relative;
                 .comment_box{
-                    font-size: nth(v.$font-size,2);
+                    font-size: v.$font-desc;
                     margin-bottom: 10%;
                     line-height: 1.5;
                 }
@@ -684,7 +737,7 @@ footer{
     width: 100%;
     .thx_para{
         width: 100%;
-        padding: 35px;
+        padding: 1.823vw;
         box-sizing: border-box;
         background: v.$point-color;
         font-size:nth(v.$font-size,5);
@@ -692,8 +745,8 @@ footer{
         text-align: center;
     }
     .footer_inner{
-        width: 1760px;
-        padding: 155px 0;
+        width: 91.67%;
+        padding: 8.07vw 0;
         box-sizing:border-box;
         margin:0 auto;
         display:flex;
@@ -708,8 +761,8 @@ footer{
             width: 60%;
             transform: translate3d(0,5%,0);
             .contact_txt{
-                font-size:20px;
-                line-height: 1.3;
+                font-size: v.$font-desc;
+                line-height: 1.5;
                 margin-bottom: v.$mar-bot;
             }
             .contact_line{
@@ -727,19 +780,23 @@ footer{
                 .sns{
                     @include align;
                     float:left;
+                    width:30%;
                     li{
-                        width: 42px;
-                        height: 42px;
-                        margin-right: 20px;
+                        // width: 42px;
+                        width: 20%;
+                        height: auto;
+                        padding:0.5vw;
+                        margin-right: 0.5vw;
+                        box-sizing: border-box;
                         &:nth-child(4){
-                            width: 45px;
-                            height: 45px;
                             transform: translate(0,5px);
                         }
                         a{
                             @include a_full;
                             img{
-                                width: 100%;
+                                max-width: 45px;
+                                @include resImg;
+
                             }
                         }
                     }

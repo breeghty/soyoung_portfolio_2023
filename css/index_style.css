@@ -1,5 +1,29 @@
 @charset "UTF-8";
+/*16px, 18px, 24px, 32px, 64px, 128px, 150px*/
+/*48px*/
+/*20px*/
+/*40px*/
+/*45px*/
 /*responsive*/
+/*기본설정*/
+.wrap {
+  width: 100%;
+  /* overflow: hidden; */
+  background: #000;
+  color: #fff;
+}
+
+.yellow {
+  color: #ffd500;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
 /*헤더*/
 header {
   width: 100%;
@@ -9,6 +33,7 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
+  overflow: hidden;
 }
 header .header_inner {
   width: 90%;
@@ -29,7 +54,7 @@ header .header_inner .logo a {
   width: 100%;
   height: 100%;
   display: block;
-  font-size: 24px;
+  font-size: 1.25vw;
 }
 header .header_inner nav {
   display: flex;
@@ -50,7 +75,7 @@ header .header_inner nav li a {
   width: 100%;
   height: 100%;
   display: block;
-  font-size: 18px;
+  font-size: 1vw;
 }
 header .header_inner nav li a.active {
   color: #ffd500;
@@ -90,7 +115,7 @@ header .header_inner .gnb_open_btn i {
   margin-bottom: 40px;
 }
 .gnb .gnb_open .gnb_open_list li a {
-  font-size: 128px;
+  font-size: 6.67vw;
   transition: all 1s;
 }
 .gnb .gnb_open .gnb_open_list li a:active, .gnb .gnb_open .gnb_open_list li a:hover, .gnb .gnb_open .gnb_open_list li a:focus {
@@ -98,8 +123,8 @@ header .header_inner .gnb_open_btn i {
   transition: all 0.2s ease;
 }
 .gnb .gnb_open .gnb_close {
-  width: 65px;
-  height: 65px;
+  max-width: 65px;
+  height: auto;
   position: absolute;
   top: 5%;
   right: 5%;
@@ -109,6 +134,7 @@ header .header_inner .gnb_open_btn i {
 }
 .gnb .gnb_open .gnb_close img {
   width: 100%;
+  height: auto;
 }
 
 @keyframes rotate_close {
@@ -136,7 +162,7 @@ header .header_inner .gnb_open_btn i {
 /*섹션 공통*/
 section {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 5.21vw;
 }
 section .inner {
   width: 87.5%;
@@ -146,20 +172,20 @@ section .inner {
 section .inner .title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 64px;
-  margin-bottom: 20px;
+  font-size: 3.34vw;
+  margin-bottom: 1.042vw;
 }
 section .inner .title_kr {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
-  font-size: 20px;
-  margin-bottom: 80px;
+  font-size: 1.042vw;
+  margin-bottom: 4.167vw;
 }
 
 /*메인 섹션*/
 main {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 5.21vw;
   overflow: hidden;
   margin-top: 90px;
 }
@@ -170,13 +196,13 @@ main .inner {
   position: relative;
 }
 main .inner h1 {
-  font-size: 150px;
-  margin: 50px 256px 250px 0;
+  font-size: 7.8125vw;
+  margin: 2.604vw 13.3vw 13.02vw 0;
   line-height: 1.1;
 }
 main .inner .rotate_text {
-  width: 160px;
-  height: 160px;
+  width: 8.33vw;
+  height: 8.33vw;
   position: absolute;
   top: 20%;
   right: 10%;
@@ -189,73 +215,77 @@ main .inner .rotate_text .rotate {
   animation: rotate_txt 10s infinite linear;
 }
 main .inner .rotate_text .arr-down {
-  width: 45px;
-  height: 45px;
+  width: 2.34vw;
+  height: 2.34vw;
   position: absolute;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
 }
 main .inner .value {
-  font-size: 64px;
-  margin-bottom: 200px;
+  font-size: 3.34vw;
+  margin-bottom: 10.42vw;
 }
 main .inner .value h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.042vw;
 }
 main .inner .introduction {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 1.042vw;
 }
 main .inner .introduction .intro_img {
   width: 40%;
+  padding: 1.302vw;
+  box-sizing: border-box;
 }
 main .inner .introduction .intro_img:hover, main .inner .introduction .intro_img:focus {
   cursor: pointer;
   transition: all 1s ease;
 }
 main .inner .introduction .intro_img img {
-  width: 603px;
-  height: 744px;
+  width: 100%;
+  max-width: 603px;
+  height: auto;
   display: block;
 }
 main .inner .introduction .intro_txt {
   width: 60%;
-  padding: 25px;
+  padding: 1.302vw;
   box-sizing: border-box;
 }
 main .inner .introduction .intro_txt h2 {
-  font-size: 48px;
-  margin-bottom: 45px;
+  font-size: 2.5vw;
+  margin-bottom: 2.34vw;
   line-height: 1.2;
 }
 main .inner .introduction .intro_txt .keyword {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 45px;
+  margin-bottom: 2.34vw;
 }
 main .inner .introduction .intro_txt .keyword li {
-  font-size: 24px;
+  font-size: 1.25vw;
 }
 main .inner .introduction .intro_txt .intro_desc {
-  font-size: 20px;
-  margin-bottom: 45px;
+  font-size: 1.042vw;
+  margin-bottom: 2.34vw;
   line-height: 1.5;
 }
 main .inner .introduction .intro_txt .icon {
   display: flex;
-  margin-bottom: 45px;
+  width: 50%;
+  margin-bottom: 1.35vw;
 }
 main .inner .introduction .intro_txt .icon li {
-  width: 42px;
-  height: 42px;
-  margin-right: 20px;
+  width: 20%;
+  height: auto;
+  padding: 0.8vw;
+  margin-right: 1vw;
+  box-sizing: border-box;
 }
 main .inner .introduction .intro_txt .icon li:nth-child(4) {
-  width: 45px;
-  height: 45px;
   transform: translate(0, 5px);
 }
 main .inner .introduction .intro_txt .icon li a {
@@ -264,17 +294,19 @@ main .inner .introduction .intro_txt .icon li a {
   display: block;
 }
 main .inner .introduction .intro_txt .icon li a img {
+  max-width: 45px;
   width: 100%;
+  height: auto;
 }
 main .inner .introduction .intro_txt .intro_skill .intro_skill_title {
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-size: 1.25vw;
+  margin-bottom: 1.25vw;
 }
 main .inner .introduction .intro_txt .intro_skill .intro_skill_list {
-  font-size: 18px;
+  font-size: 1vw;
 }
 main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
-  margin-bottom: 13px;
+  margin-bottom: 0.67vw;
 }
 
 @keyframes rotate_txt {
@@ -303,8 +335,8 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .about .inner .box .subTitle {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 32px;
-  margin-bottom: 23px;
+  font-size: 1.67vw;
+  margin-bottom: 1.198vw;
 }
 .about .inner .box ul {
   width: 95%;
@@ -313,8 +345,8 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .about .inner .box ul li {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 1vw;
+  margin-bottom: 0.781vw;
 }
 .about .inner .box .exper_content li {
   line-height: 1.5;
@@ -333,8 +365,8 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .skill .inner .skill_container ul li .btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 48px;
-  margin-bottom: 40px;
+  font-size: 2.5vw;
+  margin-bottom: 2.083vw;
 }
 .skill .inner .skill_container ul li .btn:hover, .skill .inner .skill_container ul li .btn:focus, .skill .inner .skill_container ul li .btn:active {
   color: #ffd500;
@@ -358,17 +390,24 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   left: 25%;
   border-radius: 40px;
   color: #000;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.skill .inner .skill_container .skill_modal .skill_modal_container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box {
-  padding: 85px 95px;
+  padding: 4.43vw 4.95vw;
 }
 .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_title {
-  margin-bottom: 35px;
-  font-size: 64px;
+  margin-bottom: 1.82vw;
+  font-size: 3.34vw;
   color: #ffd500;
 }
 .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_desc {
-  font-size: 20px;
+  font-size: 1.042vw;
   color: #fff;
   line-height: 1.7;
 }
@@ -413,7 +452,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .work .inner .slide-wrapper {
   width: 100%;
   overflow-x: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 2.604vw;
 }
 .work .inner .slide-wrapper .slide-container {
   width: 1000vw;
@@ -428,61 +467,65 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box {
   width: 50%;
+  padding: 1.03vw;
+  box-sizing: border-box;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box img {
   width: 100%;
+  height: auto;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box {
   width: 50%;
+  padding: 2.03vw 1.03vw;
   box-sizing: border-box;
-  padding: 30px;
-  margin-left: 3%;
+  margin-left: 1vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .title {
-  margin-bottom: 35px;
+  margin-bottom: 1.823vw;
   line-height: 1.5;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTitle {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 32px;
-  margin-bottom: 23px;
-  margin-bottom: 35px;
+  font-size: 1.67vw;
+  margin-bottom: 1.198vw;
+  margin-bottom: 1.823vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTxt {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 1vw;
+  margin-bottom: 0.781vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  margin-top: 45px;
+  width: 38%;
+  margin-top: 2.34vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li {
-  margin-right: 1vw;
+  width: 20%;
+  margin-right: 0.5vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(1) {
-  width: 55px;
-  height: 50px;
+  width: 2.8645833333vw;
+  height: 2.6041666667vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(2) {
-  width: 42px;
-  height: 48px;
+  width: 2.1875vw;
+  height: 2.5vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(3) {
-  width: 30px;
-  height: 46px;
+  width: 1.5625vw;
+  height: 2.3958333333vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(4) {
-  width: 51px;
-  height: 50px;
+  width: 2.65625vw;
+  height: 2.6041666667vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(5) {
-  width: 35px;
-  height: 46px;
+  width: 1.8229166667vw;
+  height: 2.3958333333vw;
 }
 .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li a {
   width: 100%;
@@ -502,7 +545,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1vw;
 }
 .work .inner .btn_container button:hover, .work .inner .btn_container button:active, .work .inner .btn_container button:focus {
   color: #ffd500;
@@ -525,8 +568,8 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   top: 300px;
 }
 .blog .inner .blog_content .blog_icon .blog_img {
-  width: 150px;
-  height: 150px;
+  width: 7.8125vw;
+  height: 7.8125vw;
   margin: 0 auto 30px;
 }
 .blog .inner .blog_content .blog_icon .blog_img a {
@@ -536,9 +579,11 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 }
 .blog .inner .blog_content .blog_icon .blog_img a img {
   width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 .blog .inner .blog_content .blog_icon .blog_desc {
-  font-size: 18px;
+  font-size: 1vw;
   text-align: center;
   line-height: 1.4;
 }
@@ -561,7 +606,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   display: block;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.042vw;
   text-align: center;
 }
 
@@ -572,16 +617,16 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   /*swiper.js*/
 }
 .comment .inner .comment_list .swiper-slide {
-  width: 70%;
-  padding: 40px;
-  margin: 0 20px 60px 0;
+  width: 80%;
+  padding: 2.083vw;
+  margin: 0 1.042vw 3.125vw 0;
   box-sizing: border-box;
   border: 1px solid #fff;
   border-radius: 40px;
   position: relative;
 }
 .comment .inner .comment_list .swiper-slide .comment_box {
-  font-size: 18px;
+  font-size: 1.042vw;
   margin-bottom: 10%;
   line-height: 1.5;
 }
@@ -590,7 +635,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   bottom: 8%;
   left: 6%;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 0.84vw;
   font-weight: 400;
 }
 .comment .inner .comment_list .swiper-slide.swiper-slide-active {
@@ -603,16 +648,16 @@ footer {
 }
 footer .thx_para {
   width: 100%;
-  padding: 35px;
+  padding: 1.823vw;
   box-sizing: border-box;
   background: #ffd500;
-  font-size: 64px;
+  font-size: 3.34vw;
   color: #000;
   text-align: center;
 }
 footer .footer_inner {
-  width: 1760px;
-  padding: 155px 0;
+  width: 91.67%;
+  padding: 8.07vw 0;
   box-sizing: border-box;
   margin: 0 auto;
   display: flex;
@@ -621,7 +666,7 @@ footer .footer_inner .contact-l {
   width: 40%;
 }
 footer .footer_inner .contact-l .contact_title {
-  font-size: 150px;
+  font-size: 7.8125vw;
   line-height: 1.1;
 }
 footer .footer_inner .contact-2 {
@@ -629,34 +674,35 @@ footer .footer_inner .contact-2 {
   transform: translate3d(0, 5%, 0);
 }
 footer .footer_inner .contact-2 .contact_txt {
-  font-size: 20px;
-  line-height: 1.3;
-  margin-bottom: 40px;
+  font-size: 1.042vw;
+  line-height: 1.5;
+  margin-bottom: 2.08vw;
 }
 footer .footer_inner .contact-2 .contact_line {
   width: 100%;
   height: 1px;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 2.08vw;
   background: #fff;
 }
 footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
-  font-size: 64px;
-  margin-bottom: 40px;
+  font-size: 3.34vw;
+  margin-bottom: 2.08vw;
 }
 footer .footer_inner .contact-2 .contact_adr .sns {
   display: flex;
   justify-content: space-between;
   float: left;
+  width: 30%;
 }
 footer .footer_inner .contact-2 .contact_adr .sns li {
-  width: 42px;
-  height: 42px;
-  margin-right: 20px;
+  width: 20%;
+  height: auto;
+  padding: 0.5vw;
+  margin-right: 0.5vw;
+  box-sizing: border-box;
 }
 footer .footer_inner .contact-2 .contact_adr .sns li:nth-child(4) {
-  width: 45px;
-  height: 45px;
   transform: translate(0, 5px);
 }
 footer .footer_inner .contact-2 .contact_adr .sns li a {
@@ -665,7 +711,9 @@ footer .footer_inner .contact-2 .contact_adr .sns li a {
   display: block;
 }
 footer .footer_inner .contact-2 .contact_adr .sns li a img {
+  max-width: 45px;
   width: 100%;
+  height: auto;
 }
 footer .footer_inner .contact-2 .contact_adr .copyright {
   float: right;
