@@ -264,78 +264,90 @@ for(let i = 1;i<=slideBtn.length;i++){
             console.log(`${i}번 슬라이드입니다.`);
         });
 }
-/*다음버튼*/
-nextBtn.addEventListener('click',function(){
-    if(num==1){
-        slideBox.style.transform = 'translateX(-100vw)';
-        num=2;
-    }else if(num==2){
-        slideBox.style.transform = 'translateX(-200vw)';
-        num=3;
-    }else if(num==3){
-        slideBox.style.transform = 'translateX(-300vw)';
-        num=4;
-    }else if(num==4){
-        slideBox.style.transform = 'translateX(-400vw)';
-        num=5;
-    }else if(num==5){
-        slideBox.style.transform = 'translateX(-500vw)';
-        num=6;
-    }else if(num==6){
-        slideBox.style.transform = 'translateX(-600vw)';
-        num=7;
-    }else if(num==7){
-        slideBox.style.transform = 'translateX(-700vw)';
-        num=8;
-    }else if(num==8){
-        slideBox.style.transform = 'translateX(-800vw)';
-        num=9;
-    }else if(num==9){
-        slideBox.style.transform = 'translateX(-900vw)';
-        num=10;
-    }else if(num ==10){
+/** 슬라이드 다음버튼*/
+nextBtn.addEventListener('click', function() {
+    if(num==10){
+        alert("마지막 슬라이드입니다. 1번 슬라이드로 되돌아갑니다.")
         slideBox.style.transform = 'translateX(0vw)';
+        slideBox.style.transition = 'none';
         num=1;
+
+    }else{
+        slideBox.style.transform = `translateX(-${num * 100}vw)`;
+        slideBox.style.transition = 'all 1s ease';
+        num++;
     }
-    slideBox.style.transition = 'all 1s ease';
-    
-});
-/*이전버튼*/
-prevBtn.addEventListener('click',function(){
-    if(num==1){
-        slideBox.style.transform = 'translateX(-900vw)';
-        num=10;
-    }else if(num==2){
-        slideBox.style.transform = 'translateX(0vw)';
-        num=1;
-    }else if(num==3){
-        slideBox.style.transform = 'translateX(-100vw)';
-        num=2;
-    }else if(num==4){
-        slideBox.style.transform = 'translateX(-200vw)';
-        num=3;
-    }else if(num==5){
-        slideBox.style.transform = 'translateX(-300vw)';
-        num=4;
-    }else if(num==6){
-        slideBox.style.transform = 'translateX(-400vw)';
-        num=5;
-    }else if(num==7){
-        slideBox.style.transform = 'translateX(-500vw)';
-        num=6;
-    }else if(num==8){
-        slideBox.style.transform = 'translateX(-600vw)';
-        num=7;
-    }else if(num==9){
-        slideBox.style.transform = 'translateX(-700vw)';
-        num=8;
-    }else if(num==10){
-        slideBox.style.transform = 'translateX(-800vw)';
-        num=9;   
-    }
-    slideBox.style.transition = 'all 1s ease';
 });
 
+/*이전버튼*/
+prevBtn.addEventListener('click', function() {
+    if(num==1){
+        alert("맨 처음 슬라이드입니다. 10번 슬라이드로 되돌아갑니다.");
+        slideBox.style.transform = 'translateX(-900vw)';
+        slideBox.style.transition = 'none';
+        num=10;
+    }
+    else{
+        
+        slideBox.style.transform = `translateX(-${(num-2) * 100}vw)`;
+        slideBox.style.transition = 'all 1s ease';
+        num--;
+    }
+});
+
+/** 이미지 슬라이더 스와이퍼 기능*/
+const slideNum = document.querySelectorAll('.slide-box');
+let startPoint = 0;
+let isClick = false;
+
+slideNum[0].addEventListener('mousedown', function(e) {
+  // 마우스 누를 때 발생하는 이벤트 mousedown
+    startPoint = e.clientX;
+  // console.log(e.clientX);
+    isClick = true;
+});
+
+slideNum[0].addEventListener('mousemove', function(e) {
+    console.log(e.clientX - startPoint);
+    if (isClick) {
+    slideBox.style.transform = `translateX(${e.clientX - startPoint}px)`;
+    }
+});
+
+slideNum[0].addEventListener('mouseup', function(e) {
+    isClick = false;
+    if (Math.abs(e.clientX - startPoint) >= 100) {
+        slideBox.style.transform = 'translateX(-100vw)';
+        num++;
+    } else {
+        slideBox.style.transform = 'translateX(0vw)';
+    }
+});
+
+/** mobile 환경_touch slider에 터치한 경우 스와이퍼 기능*/
+slideNum[0].addEventListener('touchstart', function(e) {
+    // 마우스 누를 때 발생하는 이벤트 mousedown
+    startPoint = e.touches[0].clientX;
+    // console.log(e.clientX);
+    isClick = true;
+});
+
+slideNum[0].addEventListener('touchmove', function(e) {
+    // console.log(e.clientX - startPoint);
+    if (isClick) {
+    slideBox.style.transform = `translateX(${e.touches[0].clientX - startPoint}px)`;
+    }
+});
+
+slideNum[0].addEventListener('touchend', function(e) {
+    isClick = false;
+    if (Math.abs(e.changedTouches[0].clientX - startPoint) >= 100) {
+        slideBox.style.transform = 'translateX(-100vw)';
+        num++;
+    } else {
+        slideBox.style.transform = 'translateX(0vw)';
+    }
+});
 
 // Comment swiper.js
 var swiper = new Swiper(".mySwiper", {
