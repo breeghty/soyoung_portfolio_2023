@@ -29,6 +29,7 @@ $vw-viewport: 1920;
 }
 @mixin sec_inner{
     width: 87.5%;
+    max-width: 1680px;
     margin:0 auto;
     padding-top: 100px;
 }
@@ -129,7 +130,7 @@ header{
     z-index:100;
     overflow:hidden;
     .header_inner{
-        width:90%;
+        width:91.67%;
         max-width:1760px;
         padding: 30px 0;
         position:relative;
@@ -746,6 +747,7 @@ footer{
     }
     .footer_inner{
         width: 91.67%;
+        max-width:1760px;
         padding: 8.07vw 0;
         box-sizing:border-box;
         margin:0 auto;
@@ -804,6 +806,7 @@ footer{
                 .copyright{
                     float:right;
                     transform: translate(0,150%);
+                    font-size: nth(v.$font-size,1);
                 }
             }
         }
