@@ -1191,8 +1191,9 @@ footer{
         margin-top:60px;
         .inner{
             h1{
+                background: blue;
                 width: 100%;
-                margin:50vh auto;
+                margin:25vh auto;
                 text-align: center;
                 font-size: nth(v.$font-size-tb2,7);
 

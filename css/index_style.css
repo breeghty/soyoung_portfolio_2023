@@ -997,8 +997,9 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-top: 60px;
   }
   main .inner h1 {
+    background: blue;
     width: 100%;
-    margin: 50vh auto;
+    margin: 25vh auto;
     text-align: center;
     font-size: 11vw;
   }
