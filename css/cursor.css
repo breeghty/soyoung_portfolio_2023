@@ -1,8 +1,4 @@
-/*16px, 18px, 24px, 32px, 64px, 128px, 150px*/
-/*48px*/
-/*20px*/
-/*40px*/
-/*45px*/
+@charset "UTF-8";
 /*cursor*/
 .inner-cursor {
   position: fixed;
@@ -26,4 +22,12 @@
   width: 6.67vw;
   height: 6.67vw;
   transition: width 0.5s, height 0.5s;
+}
+
+/*1200px 이하에서 커스텀 커서 없애기*/
+@media screen and (max-width: 1200px) {
+  /*1200px이하*/
+  .inner-cursor {
+    display: none;
+  }
 }/*# sourceMappingURL=cursor.css.map */

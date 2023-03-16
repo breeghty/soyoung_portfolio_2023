@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'responsive' as r;
 /*cursor*/
 .inner-cursor{
     position:fixed;
@@ -35,3 +36,11 @@
 //     pointer-events: none;
     
 // }
+/*1200px 이하에서 커스텀 커서 없애기*/
+@media screen and (max-width:r.$break-point-xl){
+    /*1200px이하*/
+    .inner-cursor{
+        display: none;
+    }
+    
+}

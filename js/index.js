@@ -127,7 +127,7 @@ let btnNum = document.querySelectorAll('.skill_container ul li button');
 
 let skill = [
     {id:0, title:'HTML', desc:'웹표준 준수, 웹접근성 고려한 마크업 <br>시맨틱 태그를 적절한 용도로 사용 <br>SEO 검색엔진 최적화를 위한 메타 태그를 사용<br>웹 사이트의 논리구조를 고려한 직관적인 클래스명 사용'},
-    {id:1, title:'CSS', desc:':before, :after, :hover, :focus 등의 가상 선택자 사용<br>@keyframes를 사용한 애니메이션 구현<br>@media query를 사용한 반응형웹 구현<br>디자인을 그대로 화면에 구현하는 능력<br>flex, grid 속성 사용'},
+    {id:1, title:'CSS', desc:':before, :after, :hover, :focus 등의 가상 선택자 사용<br>@keyframes를 사용한 애니메이션 구현<br>@media query를 사용한 반응형웹 구현<br>디자인을 그대로 화면에 구현하는 능력<br>flex, grid 사용'},
     {id:2, title:'SCSS', desc:'@mixin, @use, @forward를 사용한 레이아웃 재사용 가능<br>nesting으로 유지보수가 쉬운 코드 작성<br>@List와 변수를 사용해 빠르고 효율적인 코드 작성<br>독학으로 포트폴리오 스타일 작성에 SCSS 전처리기 사용'},
     {id:3, title:'Javascript', desc:'vanilla js로 DOM 조작을 통해 UI 개발 가능<br>jQuery, swiper.js, GSAP scrolltriger 등 라이브러리와 플러그인 활용 가능<br>javascript로 포트폴리오 하드코딩<br>동적인 웹 구현 가능<br>for문, 배열, 객체, 함수 문법 활용<br>React 사용 경험 있음'},
     {id:4, title:'Adobe XD', desc:'UI 디자인 가능<br>XD 프로그램으로 아주대학교 병원 사이트 리뉴얼 작업<br>포토샵, 일러스트레이터와 연계작업 능숙<br>프로토타입 기능 사용'},
@@ -300,6 +300,7 @@ const slideNum = document.querySelectorAll('.slide-box');
 let startPoint = 0;
 let isClick = false;
 
+
 slideNum[0].addEventListener('mousedown', function(e) {
   // 마우스 누를 때 발생하는 이벤트 mousedown
     startPoint = e.clientX;
@@ -308,7 +309,7 @@ slideNum[0].addEventListener('mousedown', function(e) {
 });
 
 slideNum[0].addEventListener('mousemove', function(e) {
-    console.log(e.clientX - startPoint);
+    // console.log(e.clientX - startPoint);
     if (isClick) {
     slideBox.style.transform = `translateX(${e.clientX - startPoint}px)`;
     }
@@ -316,7 +317,7 @@ slideNum[0].addEventListener('mousemove', function(e) {
 
 slideNum[0].addEventListener('mouseup', function(e) {
     isClick = false;
-    if (Math.abs(e.clientX - startPoint) >= 100) {
+    if ((startPoint - e.clientX) >= 250) {
         slideBox.style.transform = 'translateX(-100vw)';
         num++;
     } else {
@@ -326,7 +327,6 @@ slideNum[0].addEventListener('mouseup', function(e) {
 
 /** mobile 환경_touch slider에 터치한 경우 스와이퍼 기능*/
 slideNum[0].addEventListener('touchstart', function(e) {
-    // 마우스 누를 때 발생하는 이벤트 mousedown
     startPoint = e.touches[0].clientX;
     // console.log(e.clientX);
     isClick = true;
@@ -341,7 +341,7 @@ slideNum[0].addEventListener('touchmove', function(e) {
 
 slideNum[0].addEventListener('touchend', function(e) {
     isClick = false;
-    if (Math.abs(e.changedTouches[0].clientX - startPoint) >= 100) {
+    if ((startPoint - e.changedTouches[0].clientX) >= 100) {
         slideBox.style.transform = 'translateX(-100vw)';
         num++;
     } else {
