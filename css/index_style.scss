@@ -100,9 +100,9 @@ $vw-viewport: 1920;
         @content;
     }
 }
-%title_xl{
-    font-size: 4vw;
-}
+
+
+
 
 /*기본설정*/
 
@@ -147,11 +147,6 @@ header{
             a{
                 @include a_full;
                 font-size: nth(v.$font-size,3);
-                /*반응형*/
-                @include responsive_xl{
-                    /*1200px이하*/
-                    font-size: nth(v.$font-size-tb,3);
-                }
             }
         }
         nav{
@@ -170,11 +165,6 @@ header{
                 a{
                     @include a_full;
                     font-size: nth(v.$font-size,2);
-                    /*반응형*/
-                    @include responsive_xl{
-                        /*1200px이하*/
-                        font-size: nth(v.$font-size-tb,2);
-                    }
                     &.active{
                         @include active_a;
                         
@@ -300,11 +290,6 @@ main{
             font-size: nth(v.$font-size,7);
             margin: 2.604vw 13.3vw 13.02vw 0;
             line-height: 1.1;
-            /*반응형*/
-            @include responsive_xl{
-                /*1200px이하*/
-                font-size: nth(v.$font-size-tb,7);
-            }
         }
         .rotate_text{
             width: 8.33vw;
@@ -313,12 +298,6 @@ main{
             top: 20%;
             right:10%;
             float:left;
-            /*반응형*/
-            @include responsive_xl{
-                /*1200px이하*/
-                top:30%;
-                right:5%;
-            }
             .rotate{
                 @include a_full;
                 animation: rotate_txt 10s infinite linear;
@@ -335,11 +314,6 @@ main{
         .value{
             font-size: nth(v.$font-size,5);
             margin-bottom: 10.42vw;
-            /*반응형*/
-            @include responsive_xl{
-                /*1200px이하*/
-                font-size: nth(v.$font-size-tb,5);
-            }
             h2{
                 margin-bottom: 1.042vw;
             }
@@ -374,40 +348,19 @@ main{
                     font-size: v.$font-mdtit;
                     margin-bottom: v.$mar-bot_2;
                     line-height: 1.2;
-                    /*반응형*/
-                    @include responsive_xl{
-                        /*1200px이하*/
-                        font-size: v.$font-mdtit-tb;
-                        margin-bottom: v.$mar-bot_2_tb;
-                        line-height:1.5
-                    }
                     
                 }
                 .keyword{
                     @include align;
                     margin-bottom: v.$mar-bot_2;
-                    @include responsive_xl{
-                        /*1200px이하*/
-                        margin-bottom: v.$mar-bot_2_tb;
-                    }
                     li{
                         font-size: nth(v.$font-size, 3);
-                        /*반응형*/
-                        @include responsive_xl{
-                            /*1200px이하*/
-                            font-size: nth(v.$font-size-tb,3);
-                        }
                     }
                 }
                 .intro_desc{
                     font-size: v.$font-desc;
                     margin-bottom: v.$mar-bot_2;
                     line-height: 1.5;
-                    /*반응형*/
-                    @include responsive_xl{
-                        /*1200px이하*/
-                        font-size: nth(v.$font-size-tb,2);
-                    }
                 }
                 .icon{
                     display: flex;
@@ -435,11 +388,6 @@ main{
                     }
                 }
                 .intro_skill{
-                    /*반응형*/
-                    @include responsive_xl{
-                        /*1200px이하*/
-                        display:none;
-                    }
                     .intro_skill_title{
                         font-size: nth(v.$font-size, 3);
                         margin-bottom: 1.25vw;
@@ -480,13 +428,13 @@ main{
             width: 50%;
         }
         .box{
-            margin-bottom: 45px;
+            margin-bottom: 2.4vw;
             .subTitle{
                 @include subTitle;
             }
             ul{
                 width: 95%;
-                padding: 10px;
+                padding: 0.521vw;
                 li{
                     @include about_li;
                 }
@@ -703,7 +651,7 @@ main{
 .blog{
     .inner{
         .title{
-            margin-bottom: 100px;
+            margin-bottom: 5.208vw;
         }
         .blog_content{
             // background: red;
@@ -875,4 +823,281 @@ footer{
     }
 }
 
+/*responsive web 반응형*/
 
+@include responsive_xl{
+    /*헤더*/
+    header{
+        .header_inner{
+            .logo{
+                a{
+                    font-size: nth(v.$font-size-tb,3);
+                }
+            }
+            nav{
+                li{
+                    a{
+                        font-size: nth(v.$font-size-tb,2);
+                    }
+                }
+            }
+        }
+    }
+    /*섹션 공통*/
+    section{
+        .inner{
+            .title{
+                // font-size: v.$title-tb;
+                font-size: nth(v.$font-size-tb,5);
+                margin-bottom: 1.2vw;
+            }
+            .title_kr{
+                // font-size: v.$krtitle-tb;
+                font-size: v.$font-desc-tb;
+                margin-bottom: 4.5vw;
+            }
+        }
+    }
+    /*main*/
+    main{
+        .inner{
+            h1{
+                font-size: nth(v.$font-size-tb,7);
+            }
+            .rotate_text{
+                    top:30%;
+                    right:5%;
+                }
+            .value{
+                font-size: nth(v.$font-size-tb,5);
+            }
+            .introduction{
+                .intro_txt{
+                    h2{
+                        font-size: v.$font-mdtit-tb;
+                        margin-bottom: v.$mar-bot_2_tb;
+                        line-height:1.5
+                    }
+                    .keyword{
+                        margin-bottom: v.$mar-bot_2_tb;
+                        li{
+                            font-size: nth(v.$font-size-tb,3);
+                        }
+                    }
+                    .intro_desc{
+                        font-size: nth(v.$font-size-tb,2);
+                    }
+                    .intro_skill{
+                        display:none;
+                    }
+                }
+            }
+        }
+        
+    }
+    /*About*/
+    .about{
+        .inner{
+            .box{
+                padding: 1.25vw;
+                box-sizing: border-box;
+                .subTitle{
+                    font-size: 2vw;
+                }
+                ul{
+                    li{
+                        font-size: nth(v.$font-size-tb,2);
+                        margin-bottom: 1vw;
+                    }
+            
+                }
+                .exper_content{
+                    li{
+                        line-height: 1.5;
+                    }
+                }
+            }
+            
+        }
+    }
+    /*skill*/
+    .skill{
+        .inner{
+            .skill_container{
+                ul{
+                    li{
+                        .btn{
+                            font-size: v.$font-mdtit-tb;
+                            // font-size: 3.2vw;
+                        }
+                    }
+                }
+                .skill_modal{
+                    .skill_modal_container{
+                        height: 30vh;
+                        top:33.67%;
+                        left: 25%;
+                        .skill_modal_box{
+                            .skill_modal_title{
+                                font-size: nth(v.$font-size-tb,5);
+                            }
+                            .skill_modal_desc{
+                                font-size: 1.25vw;
+                                line-height: 1.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    /*pers_scroll*/
+    .pers_scroll{
+        .marquee_text{
+            margin-bottom: 2vh;
+            .en_text, .kr_text{
+                padding: 2vh 0;
+            }
+        }
+    }
+    /*work*/
+    .work{
+        .inner{
+            .slide-wrapper{
+                .slide-container{
+                    .slide-box{
+                        .slide-txt-box{
+                            .subTitle{
+                                font-size: nth(v.$font-size-tb,4);
+                                margin-bottom: 1.823vw;
+                            }
+                            .subTxt{
+                                font-size:nth(v.$font-size-tb,2);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .btn_container{
+                button{
+                    padding: 0.3vw;
+                    margin:0.3vw;
+                    font-size: nth(v.$font-size-tb,2);
+                }
+            }
+        }
+    }
+    /*blog*/
+    .blog{
+        .inner{
+            .title{
+                margin-bottom: 4.5vw;
+            }
+            .blog_content{
+                // background: red;
+                height: 110vh;
+                box-sizing: border-box;
+                .blog_icon{
+                    top:20vw;
+                    .blog_img{
+                        width:7.8125vw;
+                        height:7.8125vw;
+                        margin:0 auto 1.563vw;
+                    }
+                    .blog_desc{
+                        font-size: nth(v.$font-size-tb, 2);
+                        text-align: center;
+                        line-height: 1.4;
+                    }
+                }
+                .blog_list{
+                    // background: teal;
+                    li{
+                        padding: 2.6vw;
+                        margin: 2.6vw;
+                        margin-bottom: 4.167vw;
+                        a{
+                            font-size:v.$font-desc-tb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*comment*/
+    .comment{
+        .inner{
+            .comment_list{
+                padding: 1vw;
+                box-sizing: border-box;
+                .swiper-slide{
+                    width: 90%;
+                    padding: 3vw;
+                    .comment_box{
+                        font-size: v.$font-desc-tb;
+                        line-height: 1.6;
+                    }
+                    .commenter{
+                        position:absolute;
+                        bottom:8%;
+                        left:8%;
+                        line-height: 1.6;
+                        font-size: nth(v.$font-size-tb,1);
+                    }
+                }
+            }
+        }
+    }
+    /*footer*/
+    footer{
+        .thx_para{
+            font-size:nth(v.$font-size-tb,5);
+        }
+        .footer_inner{
+            width: 95%;
+            max-width:1760px;
+            .contact-l{
+                margin-right: 5vw;
+                .contact_title{
+                    font-size: nth(v.$font-size-tb, 7);
+                    line-height: 1.1;
+                }
+            }
+            .contact-2{
+                width: 60%;
+                transform: translate3d(0,5%,0);
+                .contact_txt{
+                    font-size: v.$font-desc-tb;
+                    line-height: 1.5;
+                    margin-bottom: v.$mar-bot_tb;
+                }
+                .contact_line{
+                    margin-bottom: v.$mar-bot_tb;
+                }
+                .contact_adr{
+                    .e-mail, .phone{
+                        font-size: nth(v.$font-size-tb,5);
+                        margin-bottom: v.$mar-bot_tb;
+                    }
+                    .sns{
+                        
+                        li{
+                            // width: 42px;
+                            &:nth-child(4){
+                                transform: translate(0,5%);
+                            }
+                        }
+                    }
+                    .copyright{
+                        transform: translate(0,148%);
+                        font-size: nth(v.$font-size-tb,1);
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
