@@ -1150,9 +1150,7 @@ footer{
     .gnb{
         .gnb_open{
             .gnb_open_list{
-                width: 80%;
-                color:v.$basic-color;
-                position:absolute;
+                width: 90%;
                 top:50%;
                 left: 50%;
                 //transform: translate(-50%,-50%);
@@ -1160,7 +1158,7 @@ footer{
                     margin-bottom: 2.083vw;
                     
                     a{
-                        font-size: nth(v.$font-size-tb2,6);
+                        font-size: 10vw;
                     }
                 }
             }
@@ -1176,12 +1174,12 @@ footer{
             padding-top: 10vw;
             .title{
                 // font-size: v.$title-tb;
-                font-size: nth(v.$font-size-tb,5);
+                font-size: nth(v.$font-size-tb2,5);
                 margin-bottom: 1.2vw;
             }
             .title_kr{
                 // font-size: v.$krtitle-tb;
-                font-size: v.$font-desc-tb;
+                font-size: nth(v.$font-size-tb2,2);
                 margin-bottom: 4.5vw;
             }
         }
@@ -1191,9 +1189,8 @@ footer{
         margin-top:60px;
         .inner{
             h1{
-                background: blue;
                 width: 100%;
-                margin:25vh auto;
+                margin:20vh auto 33vh;
                 text-align: center;
                 font-size: nth(v.$font-size-tb2,7);
 
@@ -1205,9 +1202,18 @@ footer{
                 font-size: nth(v.$font-size-tb2,5);
             }
             .introduction{
-                //flex-direction: column;
+                flex-direction: column;
+                .intro_img{
+                    width: 100%;
+                    background: green;
+                    margin:0 auto;
+                    img{
+                        width:100%;
+                        max-width: 830px;
+                    }
+                }
                 .intro_txt{
-                    //width:100%;
+                    width:100%;
                     h2{
                         font-size: v.$font-mdtit-tb;
                         margin-bottom: v.$mar-bot_2_tb;
@@ -1311,13 +1317,46 @@ footer{
             .slide-wrapper{
                 .slide-container{
                     .slide-box{
+                        float:left;
+                        position:relative;
+                        .slide-img-box{
+                            background: #000;
+                            width: 100%;
+                            img{
+                                width: 100%;
+                            }
+                        }
                         .slide-txt-box{
+                            background: rgba(0,0,0,0.4);
+                            position:absolute;
+                            width: 100%;
+                            height: 100%;
+                            top:0%;
+                            left:0;
+                            padding: 1.25vw;
                             .subTitle{
-                                font-size: nth(v.$font-size-tb,4);
+                                font-size: nth(v.$font-size-tb2,4);
                                 margin-bottom: 1.823vw;
                             }
                             .subTxt{
-                                font-size:nth(v.$font-size-tb,2);
+                                font-size:nth(v.$font-size-tb2,2);
+                            }
+                            .subIcon{
+                                position:absolute;
+                                background: blue;
+                                width:50%;
+                                bottom:5%;
+                                left:0;
+                                li{
+                                    width:10vw;
+                                    
+                                    a{
+                                        img{
+                                            width: 100%;
+                                            max-width: 200px;
+                                        }
+                                    }
+                                }
                             }
                             
                         }

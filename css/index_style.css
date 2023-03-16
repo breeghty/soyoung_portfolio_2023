@@ -964,9 +964,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   /*클릭시 열리는 메뉴바*/
   .gnb .gnb_open .gnb_open_list {
-    width: 80%;
-    color: #fff;
-    position: absolute;
+    width: 90%;
     top: 50%;
     left: 50%;
   }
@@ -974,7 +972,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 2.083vw;
   }
   .gnb .gnb_open .gnb_open_list li a {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .gnb .gnb_open .gnb_close {
     max-width: 65px;
@@ -985,11 +983,11 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding-top: 10vw;
   }
   section .inner .title {
-    font-size: 3.75vw;
+    font-size: 6vw;
     margin-bottom: 1.2vw;
   }
   section .inner .title_kr {
-    font-size: 1.4vw;
+    font-size: 1.75vw;
     margin-bottom: 4.5vw;
   }
   /*main*/
@@ -997,9 +995,8 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-top: 60px;
   }
   main .inner h1 {
-    background: blue;
     width: 100%;
-    margin: 25vh auto;
+    margin: 20vh auto 33vh;
     text-align: center;
     font-size: 11vw;
   }
@@ -1007,7 +1004,22 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     display: none;
   }
   main .inner .value {
-    font-size: 4.5vw;
+    font-size: 6vw;
+  }
+  main .inner .introduction {
+    flex-direction: column;
+  }
+  main .inner .introduction .intro_img {
+    width: 100%;
+    background: green;
+    margin: 0 auto;
+  }
+  main .inner .introduction .intro_img img {
+    width: 100%;
+    max-width: 830px;
+  }
+  main .inner .introduction .intro_txt {
+    width: 100%;
   }
   main .inner .introduction .intro_txt h2 {
     font-size: 3vw;
@@ -1076,12 +1088,46 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding: 2vh 0;
   }
   /*work*/
+  .work .inner .slide-wrapper .slide-container .slide-box {
+    float: left;
+    position: relative;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box {
+    background: #000;
+    width: 100%;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box img {
+    width: 100%;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    padding: 1.25vw;
+  }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTitle {
-    font-size: 1.75vw;
+    font-size: 2.25vw;
     margin-bottom: 1.823vw;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTxt {
-    font-size: 1.25vw;
+    font-size: 1.75vw;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
+    position: absolute;
+    background: blue;
+    width: 50%;
+    bottom: 5%;
+    left: 0;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li {
+    width: 10vw;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li a img {
+    width: 100%;
+    max-width: 200px;
   }
   .work .inner .btn_container button {
     padding: 0.3vw;
