@@ -997,13 +997,10 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-top: 60px;
   }
   main .inner h1 {
-    background: red;
     width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+    margin: 50vh auto;
     text-align: center;
     font-size: 11vw;
-    padding-top: 50vh;
   }
   main .inner .rotate_text {
     display: none;

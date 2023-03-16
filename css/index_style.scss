@@ -1191,13 +1191,10 @@ footer{
         margin-top:60px;
         .inner{
             h1{
-                background: red;
                 width: 100%;
-                height: 100vh;
-                margin:0 auto;
+                margin:50vh auto;
                 text-align: center;
                 font-size: nth(v.$font-size-tb2,7);
-                padding-top: 50vh;
 
             }
             .rotate_text{
