@@ -8,12 +8,19 @@ $font-desc: 1.042vw;//20px
 $mar-bot: 2.08vw;//40px
 $mar-bot_2:2.34vw;//45px
 
-/*font-size tablet */
+/*font-size horizontal tablet 태블릿 가로 */
 $font-size-tb: 1vw, 1.25vw, 1.5vw, 1.75vw, 3.75vw, 7vw, 9vw;
 $font-mdtit-tb: 3vw;
 $font-desc-tb: 1.4vw;
 $mar-bot_tb: 2.25vw;
 $mar-bot_2_tb:2.5vw;
+
+/*font-size vertical tablet 태블릿 세로 */
+$font-size-tb2: 1.5vw, 1.75vw, 2vw, 1.75vw, 4.5vw, 8vw, 11vw;
+$font-mdtit-tb2: 3vw;
+$font-desc-tb2: 1.4vw;
+$mar-bot_tb2: 2.25vw;
+$mar-bot_2_tb2:2.5vw;
 
 /*xl title font*/
 $title-tb: 3.75vw;

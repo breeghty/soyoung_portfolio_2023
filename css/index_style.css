@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*font-size tablet */
+/*font-size horizontal tablet 태블릿 가로 */
+/*font-size vertical tablet 태블릿 세로 */
 /*xl title font*/
 /*responsive*/
 /*기본설정*/
@@ -746,6 +747,9 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     font-size: 1.25vw;
   }
   /*섹션 공통*/
+  section .inner {
+    padding-top: 8vw;
+  }
   section .inner .title {
     font-size: 3.75vw;
     margin-bottom: 1.2vw;
@@ -801,6 +805,250 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     line-height: 1.5;
   }
   /*skill*/
+  .skill .inner .skill_container ul li .btn {
+    font-size: 3vw;
+  }
+  .skill .inner .skill_container .skill_modal .skill_modal_container {
+    height: 30vh;
+    top: 33.67%;
+    left: 25%;
+  }
+  .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_title {
+    font-size: 3.75vw;
+  }
+  .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_desc {
+    font-size: 1.25vw;
+    line-height: 1.7;
+  }
+  /*pers_scroll*/
+  .pers_scroll .marquee_text {
+    margin-bottom: 2vh;
+  }
+  .pers_scroll .marquee_text .en_text, .pers_scroll .marquee_text .kr_text {
+    padding: 2vh 0;
+  }
+  /*work*/
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTitle {
+    font-size: 1.75vw;
+    margin-bottom: 1.823vw;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTxt {
+    font-size: 1.25vw;
+  }
+  .work .inner .btn_container button {
+    padding: 0.3vw;
+    margin: 0.3vw;
+    font-size: 1.25vw;
+  }
+  /*blog*/
+  .blog .inner .title {
+    margin-bottom: 4.5vw;
+  }
+  .blog .inner .blog_content {
+    height: 95vw;
+    box-sizing: border-box;
+  }
+  .blog .inner .blog_content .blog_icon {
+    top: 20vw;
+  }
+  .blog .inner .blog_content .blog_icon .blog_img {
+    width: 7.8125vw;
+    height: 7.8125vw;
+    margin: 0 auto 1.563vw;
+  }
+  .blog .inner .blog_content .blog_icon .blog_desc {
+    font-size: 1.25vw;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .blog .inner .blog_content .blog_list li {
+    padding: 2.5vw;
+    margin: 2.5vw;
+    margin-bottom: 4.167vw;
+  }
+  .blog .inner .blog_content .blog_list li a {
+    font-size: 1.4vw;
+  }
+  /*comment*/
+  .comment .inner .comment_list {
+    padding: 1vw;
+    box-sizing: border-box;
+  }
+  .comment .inner .comment_list .swiper-slide {
+    width: 90%;
+    padding: 3vw;
+  }
+  .comment .inner .comment_list .swiper-slide .comment_box {
+    font-size: 1.4vw;
+    line-height: 1.6;
+  }
+  .comment .inner .comment_list .swiper-slide .commenter {
+    position: absolute;
+    bottom: 8%;
+    left: 8%;
+    line-height: 1.6;
+    font-size: 1vw;
+  }
+  /*footer*/
+  footer .thx_para {
+    padding: 2vw;
+    font-size: 3.75vw;
+  }
+  footer .footer_inner {
+    width: 95%;
+    max-width: 1760px;
+  }
+  footer .footer_inner .contact-l {
+    margin-right: 5vw;
+  }
+  footer .footer_inner .contact-l .contact_title {
+    font-size: 9vw;
+    line-height: 1.1;
+  }
+  footer .footer_inner .contact-2 {
+    width: 60%;
+    transform: translate3d(0, 5%, 0);
+  }
+  footer .footer_inner .contact-2 .contact_txt {
+    font-size: 1.4vw;
+    line-height: 1.5;
+    margin-bottom: 2.25vw;
+  }
+  footer .footer_inner .contact-2 .contact_line {
+    margin-bottom: 2.25vw;
+  }
+  footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
+    font-size: 3.75vw;
+    margin-bottom: 2.25vw;
+  }
+  footer .footer_inner .contact-2 .contact_adr .sns li:nth-child(4) {
+    transform: translate(0, 5%);
+  }
+  footer .footer_inner .contact-2 .contact_adr .copyright {
+    transform: translate(0, 148%);
+    font-size: 1vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  /*992px이하*/
+  /*헤더*/
+  header {
+    height: 60px;
+    padding-top: 1vw;
+  }
+  header .header_inner {
+    padding: 1vw 0;
+  }
+  header .header_inner .logo {
+    width: auto;
+    transform: translateY(5%);
+  }
+  header .header_inner .logo a {
+    font-size: 2vw;
+  }
+  header .header_inner nav {
+    transform: translateY(-10%);
+    justify-content: space-between;
+  }
+  header .header_inner nav li {
+    margin: 0 1.042vw;
+    padding: 0.521vw 1.042vw;
+  }
+  header .header_inner nav li a {
+    font-size: 1.5vw;
+  }
+  header .header_inner .gnb_open_btn {
+    width: auto;
+    top: -10%;
+  }
+  /*클릭시 열리는 메뉴바*/
+  .gnb .gnb_open .gnb_open_list {
+    width: 80%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .gnb .gnb_open .gnb_open_list li {
+    margin-bottom: 2.083vw;
+  }
+  .gnb .gnb_open .gnb_open_list li a {
+    font-size: 8vw;
+  }
+  .gnb .gnb_open .gnb_close {
+    max-width: 65px;
+    width: 7vw;
+  }
+  /*섹션 공통*/
+  section .inner {
+    padding-top: 10vw;
+  }
+  section .inner .title {
+    font-size: 3.75vw;
+    margin-bottom: 1.2vw;
+  }
+  section .inner .title_kr {
+    font-size: 1.4vw;
+    margin-bottom: 4.5vw;
+  }
+  /*main*/
+  main {
+    margin-top: 60px;
+  }
+  main .inner h1 {
+    width: 100%;
+    font-size: 11vw;
+  }
+  main .inner .rotate_text {
+    display: none;
+  }
+  main .inner .value {
+    font-size: 4.5vw;
+  }
+  main .inner .introduction .intro_txt h2 {
+    font-size: 3vw;
+    margin-bottom: 2.5vw;
+    line-height: 1.5;
+  }
+  main .inner .introduction .intro_txt .keyword {
+    margin-bottom: 2.5vw;
+  }
+  main .inner .introduction .intro_txt .keyword li {
+    font-size: 1.5vw;
+  }
+  main .inner .introduction .intro_txt .intro_desc {
+    font-size: 1.25vw;
+  }
+  main .inner .introduction .intro_txt .intro_skill {
+    display: none;
+  }
+  /*About*/
+  .about .inner .about_left {
+    clear: both;
+    width: 100%;
+  }
+  .about .inner .about_right {
+    clear: both;
+    width: 100%;
+  }
+  .about .inner .box {
+    padding: 1.25vw;
+    box-sizing: border-box;
+  }
+  .about .inner .box .subTitle {
+    font-size: 2vw;
+  }
+  .about .inner .box ul li {
+    font-size: 1.25vw;
+    margin-bottom: 1vw;
+  }
+  .about .inner .box .exper_content li {
+    line-height: 1.5;
+  }
+  /*skill*/
+  .skill .inner .skill_container {
+    flex-wrap: wrap;
+  }
   .skill .inner .skill_container ul li .btn {
     font-size: 3vw;
   }
