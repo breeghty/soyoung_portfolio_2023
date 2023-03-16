@@ -731,6 +731,14 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
 @media screen and (max-width: 1200px) {
   /*1200px이하*/
   /*헤더*/
+  header {
+    height: 80px;
+    padding-top: 1.563vw;
+    box-sizing: border-box;
+  }
+  header .header_inner {
+    padding: 1.563vw 0;
+  }
   header .header_inner .logo a {
     font-size: 1.5vw;
   }
@@ -747,6 +755,9 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 4.5vw;
   }
   /*main*/
+  main {
+    margin-top: 80px;
+  }
   main .inner h1 {
     font-size: 9vw;
   }
@@ -830,7 +841,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 4.5vw;
   }
   .blog .inner .blog_content {
-    height: 110vh;
+    height: 95vw;
     box-sizing: border-box;
   }
   .blog .inner .blog_content .blog_icon {
@@ -847,8 +858,8 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     line-height: 1.4;
   }
   .blog .inner .blog_content .blog_list li {
-    padding: 2.6vw;
-    margin: 2.6vw;
+    padding: 2.5vw;
+    margin: 2.5vw;
     margin-bottom: 4.167vw;
   }
   .blog .inner .blog_content .blog_list li a {
@@ -876,6 +887,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   /*footer*/
   footer .thx_para {
+    padding: 2vw;
     font-size: 3.75vw;
   }
   footer .footer_inner {

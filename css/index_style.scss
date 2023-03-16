@@ -828,7 +828,11 @@ footer{
 @include responsive_xl{
     /*헤더*/
     header{
+        height:80px;
+        padding-top: 1.563vw;
+        box-sizing: border-box;
         .header_inner{
+            padding: 1.563vw 0;
             .logo{
                 a{
                     font-size: nth(v.$font-size-tb,3);
@@ -860,6 +864,7 @@ footer{
     }
     /*main*/
     main{
+        margin-top:80px;
         .inner{
             h1{
                 font-size: nth(v.$font-size-tb,7);
@@ -996,8 +1001,7 @@ footer{
                 margin-bottom: 4.5vw;
             }
             .blog_content{
-                // background: red;
-                height: 110vh;
+                height: 95vw;
                 box-sizing: border-box;
                 .blog_icon{
                     top:20vw;
@@ -1013,10 +1017,9 @@ footer{
                     }
                 }
                 .blog_list{
-                    // background: teal;
                     li{
-                        padding: 2.6vw;
-                        margin: 2.6vw;
+                        padding: 2.5vw;
+                        margin: 2.5vw;
                         margin-bottom: 4.167vw;
                         a{
                             font-size:v.$font-desc-tb;
@@ -1053,6 +1056,7 @@ footer{
     /*footer*/
     footer{
         .thx_para{
+            padding: 2vw;
             font-size:nth(v.$font-size-tb,5);
         }
         .footer_inner{
