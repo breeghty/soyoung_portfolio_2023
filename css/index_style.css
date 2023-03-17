@@ -252,8 +252,8 @@ main .inner .introduction .intro_img:hover, main .inner .introduction .intro_img
 }
 main .inner .introduction .intro_img img {
   width: 100%;
-  max-width: 603px;
-  height: auto;
+  max-width: 1000px;
+  height: 100%;
   display: block;
 }
 main .inner .introduction .intro_txt {
@@ -354,6 +354,12 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
   font-size: 1vw;
   margin-bottom: 0.781vw;
 }
+.about .inner .box ul li .atit {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffd500;
+  margin-right: 1.5vw;
+}
 .about .inner .box .exper_content li {
   line-height: 1.5;
 }
@@ -377,6 +383,7 @@ main .inner .introduction .intro_txt .intro_skill .intro_skill_list li {
 .skill .inner .skill_container ul li .btn:hover, .skill .inner .skill_container ul li .btn:focus, .skill .inner .skill_container ul li .btn:active {
   color: #ffd500;
   transition: all 0.2s ease;
+  font-style: italic;
 }
 .skill .inner .skill_container .skill_modal {
   width: 100%;
@@ -983,12 +990,12 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding-top: 10vw;
   }
   section .inner .title {
-    font-size: 6vw;
-    margin-bottom: 1.2vw;
+    font-size: 6.5vw;
+    margin-bottom: 1.5vw;
   }
   section .inner .title_kr {
     font-size: 1.75vw;
-    margin-bottom: 4.5vw;
+    margin-bottom: 6vw;
   }
   /*main*/
   main {
@@ -996,7 +1003,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   main .inner h1 {
     width: 100%;
-    margin: 20vh auto 33vh;
+    margin: 15vw auto;
     text-align: center;
     font-size: 11vw;
   }
@@ -1004,41 +1011,53 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     display: none;
   }
   main .inner .value {
-    font-size: 6vw;
+    font-size: 5vw;
+    margin: 15vw auto;
   }
   main .inner .introduction {
-    flex-direction: column;
+    position: relative;
+    padding-top: 18vw;
   }
   main .inner .introduction .intro_img {
-    width: 100%;
-    background: green;
+    width: 40%;
     margin: 0 auto;
+    border-radius: 20%;
   }
   main .inner .introduction .intro_img img {
     width: 100%;
     max-width: 830px;
   }
   main .inner .introduction .intro_txt {
-    width: 100%;
+    width: 60%;
   }
   main .inner .introduction .intro_txt h2 {
-    font-size: 3vw;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 3%;
+    font-size: 4.8vw;
     margin-bottom: 2.5vw;
     line-height: 1.5;
   }
   main .inner .introduction .intro_txt .keyword {
     margin-bottom: 2.5vw;
+    flex-wrap: wrap;
   }
   main .inner .introduction .intro_txt .keyword li {
-    font-size: 1.5vw;
+    font-size: 1.75vw;
+    margin-right: 2vw;
+    margin-bottom: 1vw;
   }
   main .inner .introduction .intro_txt .intro_desc {
-    font-size: 1.25vw;
+    font-size: 1.6vw;
   }
   main .inner .introduction .intro_txt .intro_skill {
     display: none;
   }
   /*About*/
+  .about {
+    height: auto;
+  }
   .about .inner .about_left {
     clear: both;
     width: 100%;
@@ -1052,10 +1071,13 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     box-sizing: border-box;
   }
   .about .inner .box .subTitle {
-    font-size: 2vw;
+    font-size: 4vw;
+  }
+  .about .inner .box ul {
+    padding: 1.521vw;
   }
   .about .inner .box ul li {
-    font-size: 1.25vw;
+    font-size: 2vw;
     margin-bottom: 1vw;
   }
   .about .inner .box .exper_content li {
@@ -1063,10 +1085,22 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   /*skill*/
   .skill .inner .skill_container {
+    width: 95%;
     flex-wrap: wrap;
   }
+  .skill .inner .skill_container ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .skill .inner .skill_container ul li {
+    width: 45%;
+    padding: 1.5vw;
+    margin-bottom: 1.5vw;
+  }
   .skill .inner .skill_container ul li .btn {
-    font-size: 3vw;
+    font-size: 6vw;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container {
     height: 30vh;

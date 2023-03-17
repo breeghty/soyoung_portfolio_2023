@@ -112,10 +112,12 @@ handleScrollEvent();
 const profileImg = document.getElementById('profile_img');
 function changeImg(){
     profileImg.src='img/profile_color.png';
+    innerCursor.classList.add('grow');
     profileImg.transition="all 1s ease";
 }
 function restoreImg() {
     profileImg.src = "img/profile_black.png";
+    innerCursor.classList.remove('grow');
     profileImg.transition="all 1s ease";
 }
 
