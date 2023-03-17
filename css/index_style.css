@@ -1106,15 +1106,15 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     font-size: 6vw;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container {
-    height: 40vh;
-    top: 35%;
+    height: 50vh;
+    top: 25%;
     left: 25%;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_title {
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_desc {
-    font-size: 1.58vw;
+    font-size: 2vw;
     line-height: 1.7;
   }
   /*pers_scroll*/
@@ -1153,7 +1153,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 2vw;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTxt {
-    font-size: 1.75vw;
+    font-size: 2vw;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
     position: absolute;
@@ -1205,9 +1205,10 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   /*blog*/
   .blog {
     margin-bottom: 8vw;
+    height: 1490px;
   }
   .blog .inner .title {
-    margin-bottom: 4.5vw;
+    margin-bottom: 9vw;
   }
   .blog .inner .blog_content {
     height: auto;
@@ -1215,10 +1216,9 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     box-sizing: border-box;
   }
   .blog .inner .blog_content .blog_icon {
-    display: none;
     position: static;
     width: 100%;
-    margin-bottom: 10vw;
+    margin-bottom: 5vw;
   }
   .blog .inner .blog_content .blog_icon .blog_img {
     width: 15vw;
@@ -1235,11 +1235,14 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   .blog .inner .blog_content .blog_list li {
     padding: 2.5vw;
-    margin: 2.5vw;
+    margin: 7.5vw;
     margin-bottom: 4.167vw;
+    background: #ffd500;
+    border-radius: 20px;
   }
   .blog .inner .blog_content .blog_list li a {
     font-size: 2vw;
+    color: #000;
   }
   /*comment*/
   .comment .inner .comment_list {
