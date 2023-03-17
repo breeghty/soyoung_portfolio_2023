@@ -1049,7 +1049,10 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 1vw;
   }
   main .inner .introduction .intro_txt .intro_desc {
-    font-size: 1.6vw;
+    font-size: 1.75vw;
+  }
+  main .inner .introduction .intro_txt .icon {
+    display: none;
   }
   main .inner .introduction .intro_txt .intro_skill {
     display: none;
@@ -1142,35 +1145,66 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     left: 0;
     padding: 1.25vw;
   }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .title br {
+    display: none;
+  }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTitle {
-    font-size: 2.25vw;
-    margin-bottom: 1.823vw;
+    font-size: 3.25vw;
+    margin-bottom: 2vw;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subTxt {
     font-size: 1.75vw;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
     position: absolute;
-    background: blue;
-    width: 50%;
-    bottom: 5%;
+    width: 28%;
+    bottom: 3%;
     left: 0;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li {
-    width: 10vw;
+    width: 20%;
+    margin-right: 0;
+    transform: scale(0.9);
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(1) {
+    width: 55px;
+    height: 50px;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(2) {
+    width: 40px;
+    height: 47px;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(3) {
+    width: 30px;
+    height: 45px;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(4) {
+    width: 51px;
+    height: 50px;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li:nth-child(5) {
+    width: 35px;
+    height: 46px;
+  }
+  .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li a {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li a img {
     width: 100%;
-    max-width: 200px;
+  }
+  .work .inner .btn_container {
+    margin-left: 25%;
   }
   .work .inner .btn_container button {
-    padding: 0.3vw;
-    margin: 0.3vw;
-    font-size: 1.25vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    font-size: 1.75vw;
   }
   /*blog*/
   .blog {
-    margin-bottom: 5vw;
+    margin-bottom: 8vw;
   }
   .blog .inner .title {
     margin-bottom: 4.5vw;
@@ -1181,6 +1215,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     box-sizing: border-box;
   }
   .blog .inner .blog_content .blog_icon {
+    display: none;
     position: static;
     width: 100%;
     margin-bottom: 10vw;
@@ -1196,7 +1231,15 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     line-height: 1.4;
   }
   .blog .inner .blog_content .blog_list {
-    display: none;
+    width: 100%;
+  }
+  .blog .inner .blog_content .blog_list li {
+    padding: 2.5vw;
+    margin: 2.5vw;
+    margin-bottom: 4.167vw;
+  }
+  .blog .inner .blog_content .blog_list li a {
+    font-size: 2vw;
   }
   /*comment*/
   .comment .inner .comment_list {
