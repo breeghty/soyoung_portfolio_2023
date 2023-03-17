@@ -134,7 +134,7 @@ let skill = [
     {id:3, title:'Javascript', desc:'vanilla js로 DOM 조작을 통해 UI 개발 가능<br>jQuery, swiper.js, GSAP scrolltriger 등 라이브러리와 플러그인 활용 가능<br>javascript로 포트폴리오 하드코딩<br>동적인 웹 구현 가능<br>for문, 배열, 객체, 함수 문법 활용<br>React 사용 경험 있음'},
     {id:4, title:'Adobe XD', desc:'UI 디자인 가능<br>XD 프로그램으로 아주대학교 병원 사이트 리뉴얼 작업<br>포토샵, 일러스트레이터와 연계작업 능숙<br>프로토타입 기능 사용'},
     {id:5, title:'Figma', desc:'UI 디자인 가능<br>피그마로 포트폴리오 사이트 디자인<br>zeplin, fontawesome 등의 플러그인 활용 가능<br>오토 레이아웃, 컴포넌트 기능 활용<br>프로토타입 기능 사용'},
-    {id:6, title:'Photoshop', desc:'사진 편집과 이미지 보정, 펜툴 사용한 포스터 제작<br>UI 디자인 개발 툴과 연계하여 사용'},
+    {id:6, title:'Photoshop', desc:'사진 편집과 이미지 보정, 펜툴 사용한 포스터 제작<br>UI 디자인 개발 툴과 연계하여 사용<br>GTQ 포토샵 1급 자격증 보유(2023.03)'},
     {id:7, title:'Illustrator', desc:'SVG 이미지 제작<br>펜툴 사용한 일러스트 제작<br>UI 디자인 개발 툴과 연계하여 사용'},
     {id:8, title:'Github', desc:'github와 vs code 연동, 협업 가능<br> 깃허브를 통한 코드 관리<br>깃허브를 통한 웹 호스팅<br>git add, push 등의 터미널 명령어 사용'},
     {id:9, title:'Excel', desc:'컴퓨터 활용능력 2급 자격증 보유(2023.03.03)<br>기본적인 문서 작성과 셀 서식 사용<br>VLOOKUP, INDEX, MATCH 등의 기본함수 사용'},

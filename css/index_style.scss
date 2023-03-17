@@ -1320,15 +1320,15 @@ footer{
                 }
                 .skill_modal{
                     .skill_modal_container{
-                        height: 30vh;
-                        top:33.67%;
+                        height: 40vh;
+                        top:35%;
                         left: 25%;
                         .skill_modal_box{
                             .skill_modal_title{
-                                font-size: nth(v.$font-size-tb,5);
+                                font-size: 4.5vw;
                             }
                             .skill_modal_desc{
-                                font-size: 1.25vw;
+                                font-size: 1.58vw;
                                 line-height: 1.7;
                             }
                         }
@@ -1410,36 +1410,44 @@ footer{
     }
     /*blog*/
     .blog{
+        margin-bottom: 5vw;
         .inner{
+            
             .title{
                 margin-bottom: 4.5vw;
             }
             .blog_content{
-                height: 95vw;
+                height:auto;
+                padding:8vw auto;
                 box-sizing: border-box;
                 .blog_icon{
+                    //display:none;
                     position:static;
-                    top:20vw;
+                    width:100%;
+                    // background: blue;
+                    margin-bottom: 10vw;
                     .blog_img{
-                        width:7.8125vw;
-                        height:7.8125vw;
-                        margin:0 auto 1.563vw;
+                        width:15vw;
+                        height:15vw;
+                        margin:0 auto 3vw;
                     }
                     .blog_desc{
-                        font-size: nth(v.$font-size-tb, 2);
+                        font-size: nth(v.$font-size-tb2, 2);
                         text-align: center;
                         line-height: 1.4;
                     }
                 }
                 .blog_list{
-                    li{
-                        padding: 2.5vw;
-                        margin: 2.5vw;
-                        margin-bottom: 4.167vw;
-                        a{
-                            font-size:v.$font-desc-tb;
-                        }
-                    }
+                    display: none;
+                    // width:100%;
+                    // li{
+                    //     padding: 2.5vw;
+                    //     margin: 2.5vw;
+                    //     margin-bottom: 4.167vw;
+                    //     a{
+                    //         font-size:1.75vw;
+                    //     }
+                    // }
                 }
             }
         }
@@ -1452,17 +1460,17 @@ footer{
                 box-sizing: border-box;
                 .swiper-slide{
                     width: 90%;
-                    padding: 3vw;
+                    padding: 5vw;
                     .comment_box{
-                        font-size: v.$font-desc-tb;
+                        font-size: 2.3vw;
                         line-height: 1.6;
                     }
                     .commenter{
                         position:absolute;
                         bottom:8%;
-                        left:8%;
+                        left:6%;
                         line-height: 1.6;
-                        font-size: nth(v.$font-size-tb,1);
+                        font-size: nth(v.$font-size-tb2,1);
                     }
                 }
             }
@@ -1470,35 +1478,44 @@ footer{
     }
     /*footer*/
     footer{
+        
         .thx_para{
-            padding: 2vw;
-            font-size:nth(v.$font-size-tb,5);
+            padding: 3.25vw;
+            font-size:5vw;
         }
         .footer_inner{
             width: 95%;
             max-width:1760px;
             .contact-l{
-                margin-right: 5vw;
-                .contact_title{
-                    font-size: nth(v.$font-size-tb, 7);
-                    line-height: 1.1;
-                }
+                display:none;
+                // margin-right: 5vw;
+                // .contact_title{
+                //     font-size: nth(v.$font-size-tb, 7);
+                //     line-height: 1.1;
+                // }
             }
             .contact-2{
-                width: 60%;
+                width: 91.67%;
+                margin: 0 auto;
+                // background: blue;
+                text-align: center;
                 transform: translate3d(0,5%,0);
                 .contact_txt{
-                    font-size: v.$font-desc-tb;
+                    font-size: v.$font-desc-tb2;
                     line-height: 1.5;
-                    margin-bottom: v.$mar-bot_tb;
+                    margin-bottom: v.$mar-bot_tb2;
                 }
                 .contact_line{
-                    margin-bottom: v.$mar-bot_tb;
+                    margin:0 auto;
+                    margin-bottom: v.$mar-bot_tb2;
                 }
                 .contact_adr{
                     .e-mail, .phone{
-                        font-size: nth(v.$font-size-tb,5);
-                        margin-bottom: v.$mar-bot_tb;
+                        font-size: 5vw;
+                        margin-bottom: v.$mar-bot_tb2;
+                    }
+                    .phone{
+                        margin-bottom:4vw;
                     }
                     .sns{
                         
@@ -1511,7 +1528,7 @@ footer{
                     }
                     .copyright{
                         transform: translate(0,148%);
-                        font-size: nth(v.$font-size-tb,1);
+                        font-size: 1.5vw;
                     }
                 }
             }

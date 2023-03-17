@@ -1103,15 +1103,15 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     font-size: 6vw;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container {
-    height: 30vh;
-    top: 33.67%;
+    height: 40vh;
+    top: 35%;
     left: 25%;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_title {
-    font-size: 3.75vw;
+    font-size: 4.5vw;
   }
   .skill .inner .skill_container .skill_modal .skill_modal_container .skill_modal_box .skill_modal_desc {
-    font-size: 1.25vw;
+    font-size: 1.58vw;
     line-height: 1.7;
   }
   /*pers_scroll*/
@@ -1169,34 +1169,34 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     font-size: 1.25vw;
   }
   /*blog*/
+  .blog {
+    margin-bottom: 5vw;
+  }
   .blog .inner .title {
     margin-bottom: 4.5vw;
   }
   .blog .inner .blog_content {
-    height: 95vw;
+    height: auto;
+    padding: 8vw auto;
     box-sizing: border-box;
   }
   .blog .inner .blog_content .blog_icon {
     position: static;
-    top: 20vw;
+    width: 100%;
+    margin-bottom: 10vw;
   }
   .blog .inner .blog_content .blog_icon .blog_img {
-    width: 7.8125vw;
-    height: 7.8125vw;
-    margin: 0 auto 1.563vw;
+    width: 15vw;
+    height: 15vw;
+    margin: 0 auto 3vw;
   }
   .blog .inner .blog_content .blog_icon .blog_desc {
-    font-size: 1.25vw;
+    font-size: 1.75vw;
     text-align: center;
     line-height: 1.4;
   }
-  .blog .inner .blog_content .blog_list li {
-    padding: 2.5vw;
-    margin: 2.5vw;
-    margin-bottom: 4.167vw;
-  }
-  .blog .inner .blog_content .blog_list li a {
-    font-size: 1.4vw;
+  .blog .inner .blog_content .blog_list {
+    display: none;
   }
   /*comment*/
   .comment .inner .comment_list {
@@ -1205,56 +1205,58 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   .comment .inner .comment_list .swiper-slide {
     width: 90%;
-    padding: 3vw;
+    padding: 5vw;
   }
   .comment .inner .comment_list .swiper-slide .comment_box {
-    font-size: 1.4vw;
+    font-size: 2.3vw;
     line-height: 1.6;
   }
   .comment .inner .comment_list .swiper-slide .commenter {
     position: absolute;
     bottom: 8%;
-    left: 8%;
+    left: 6%;
     line-height: 1.6;
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
   /*footer*/
   footer .thx_para {
-    padding: 2vw;
-    font-size: 3.75vw;
+    padding: 3.25vw;
+    font-size: 5vw;
   }
   footer .footer_inner {
     width: 95%;
     max-width: 1760px;
   }
   footer .footer_inner .contact-l {
-    margin-right: 5vw;
-  }
-  footer .footer_inner .contact-l .contact_title {
-    font-size: 9vw;
-    line-height: 1.1;
+    display: none;
   }
   footer .footer_inner .contact-2 {
-    width: 60%;
+    width: 91.67%;
+    margin: 0 auto;
+    text-align: center;
     transform: translate3d(0, 5%, 0);
   }
   footer .footer_inner .contact-2 .contact_txt {
-    font-size: 1.4vw;
+    font-size: 2vw;
     line-height: 1.5;
-    margin-bottom: 2.25vw;
+    margin-bottom: 2.5vw;
   }
   footer .footer_inner .contact-2 .contact_line {
-    margin-bottom: 2.25vw;
+    margin: 0 auto;
+    margin-bottom: 2.5vw;
   }
   footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
-    font-size: 3.75vw;
-    margin-bottom: 2.25vw;
+    font-size: 5vw;
+    margin-bottom: 2.5vw;
+  }
+  footer .footer_inner .contact-2 .contact_adr .phone {
+    margin-bottom: 4vw;
   }
   footer .footer_inner .contact-2 .contact_adr .sns li:nth-child(4) {
     transform: translate(0, 5%);
   }
   footer .footer_inner .contact-2 .contact_adr .copyright {
     transform: translate(0, 148%);
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
 }/*# sourceMappingURL=index_style.css.map */
