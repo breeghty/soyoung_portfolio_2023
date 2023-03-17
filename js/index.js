@@ -351,6 +351,10 @@ slideNum[0].addEventListener('touchend', function(e) {
     }
 });
 
+
+
+
+
 // Comment swiper.js
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
