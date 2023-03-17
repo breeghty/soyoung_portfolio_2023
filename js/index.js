@@ -119,6 +119,14 @@ handleScrollEvent();
 
 /*main 마우스 호버하면 프로필 사진 변경*/ 
 const profileImg = document.getElementById('profile_img');
+
+//모바일에서는 프로필이미지 항상 컬러
+let mbImg = window.matchMedia('(max-width: 576px)');
+if(mbImg.matches == true){
+    // 576px이하의 경우
+    profileImg.src='img/profile_color.png';
+}
+
 function changeImg(){
     profileImg.src='img/profile_color.png';
     innerCursor.classList.add('grow');
@@ -128,7 +136,13 @@ function restoreImg() {
     profileImg.src = "img/profile_black.png";
     innerCursor.classList.remove('grow');
     profileImg.transition="all 1s ease";
+    if(mbImg.matches == true){
+        // 576px이하의 경우
+        profileImg.src='img/profile_color.png';
+    }
+
 }
+
 
 /*skill 섹션 모달창 내용 바꾸기*/
 const skillModal = document.querySelector('.skill_modal');

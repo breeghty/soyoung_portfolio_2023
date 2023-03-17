@@ -26,4 +26,6 @@ $mar-bot_2_tb2:2.75vw;
 $title-tb: 3.75vw;
 $krtitle-tb:1.4vw;
 
+/*모바일에서 vh 계산*/
+$vh:calc(var(--var, 1vh)*100);
 
