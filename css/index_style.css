@@ -1003,7 +1003,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   main .inner h1 {
     width: 100%;
-    margin: 15vw auto;
+    margin: 25vw auto;
     text-align: center;
     font-size: 11vw;
   }
@@ -1011,8 +1011,8 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     display: none;
   }
   main .inner .value {
-    font-size: 5vw;
-    margin: 15vw auto;
+    font-size: 5.5vw;
+    margin: 20vw auto;
   }
   main .inner .introduction {
     position: relative;
@@ -1077,7 +1077,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding: 1.521vw;
   }
   .about .inner .box ul li {
-    font-size: 2vw;
+    font-size: 1.75vw;
     margin-bottom: 1vw;
   }
   .about .inner .box .exper_content li {

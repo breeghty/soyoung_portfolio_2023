@@ -1202,7 +1202,7 @@ footer{
         .inner{
             h1{
                 width: 100%;
-                margin: 15vw auto;
+                margin: 25vw auto;
                 text-align: center;
                 font-size: nth(v.$font-size-tb2,7);
 
@@ -1211,8 +1211,8 @@ footer{
                     display: none;
                 }
             .value{
-                font-size: 5vw;
-                margin:15vw auto;
+                font-size: 5.5vw;
+                margin:20vw auto;
                 // display: none;
             }
             .introduction{
@@ -1281,7 +1281,7 @@ footer{
                 ul{
                     padding: 1.521vw;
                     li{
-                        font-size: nth(v.$font-size-tb2,3);
+                        font-size: nth(v.$font-size-tb2,2);
                         margin-bottom: 1vw;
                     }
             
