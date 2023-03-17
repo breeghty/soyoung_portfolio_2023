@@ -4,6 +4,15 @@ document.addEventListener('click', function(e) {
     }
 });
 
+/**모바일 브라우저에서 100vh 오류 해결 */
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh',`${vh}px`);
+//resize
+window.addEventListener('resize',()=>{
+    let vh = wiindow.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh',`${vh}px`);
+})
+
 //menubar menuopen, nav 사라짐
 let gnbOpen = document.querySelector('.gnb .gnb_open');
 document.querySelector('.gnb .gnb_open_btn').addEventListener('click',function(){

@@ -1680,7 +1680,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     font-size: 1.5vw;
   }
 }
-/*500px 이하 태블릿*/
+/*576px 이하 모바일*/
 @media screen and (max-width: 576px) {
   /*500px이하*/
   /*헤더*/
@@ -1693,13 +1693,14 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   header .header_inner .logo {
     width: auto;
-    transform: translateY(5%);
+    padding: 1vw 0;
+    transform: translateY(15%);
   }
   header .header_inner .logo a {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   header .header_inner nav {
-    transform: translateY(-10%);
+    transform: translate(-5%, -10%);
     justify-content: space-between;
   }
   header .header_inner nav li {
@@ -1707,11 +1708,14 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding: 0.521vw 1.042vw;
   }
   header .header_inner nav li a {
-    font-size: 1.5vw;
+    font-size: 1.75vw;
   }
   header .header_inner .gnb_open_btn {
     width: auto;
-    top: -10%;
+    top: 0%;
+  }
+  header .header_inner .gnb_open_btn i {
+    font-size: 2.875vw;
   }
   /*클릭시 열리는 메뉴바*/
   .gnb .gnb_open .gnb_open_list {
@@ -1747,9 +1751,13 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   main .inner h1 {
     width: 100%;
-    margin: 25vw auto;
+    height: calc(var(--var, 1vh) * 100);
+    background: tomato;
+    margin: 0 auto;
+    padding-top: 33.3vh;
     text-align: center;
-    font-size: 11vw;
+    box-sizing: border-box;
+    font-size: 11.5vw;
   }
   main .inner .rotate_text {
     display: none;
@@ -1869,10 +1877,6 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding: 2vh 0;
   }
   /*work*/
-  .work .inner .slide-wrapper .slide-container .slide-box {
-    float: left;
-    position: relative;
-  }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box {
     background: #000;
     width: 100%;
@@ -1905,8 +1909,8 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
     position: absolute;
-    width: 28%;
-    bottom: 3%;
+    width: 30%;
+    bottom: 2%;
     left: 0%;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li {
@@ -1958,7 +1962,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     margin-bottom: 9vw;
   }
   .blog .inner .blog_content {
-    height: 1320px;
+    height: 850px;
     padding: 7vw auto;
     box-sizing: border-box;
   }
