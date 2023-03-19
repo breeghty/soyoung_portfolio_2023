@@ -403,3 +403,18 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 });
+
+const footerImg = document.getElementById('footerImg');
+/**푸터에서 프로필이미지 변경 width 576px 이하 */
+function changeImg_footer(){
+    footerImg.src='img/profile_footer.png';
+    footerImg.transition="all 1s ease";
+}
+function restoreImg_footer() {
+    footerImg.src = "img/profile_footer_black.png";
+    footerImg.transition="all 1s ease";
+}
+
+footerImg.addEventListener('touchstart',changeImg_footer());
+footerImg.addEventListener('touchmove',changeImg_footer());
+footerImg.addEventListener('touchend', restoreImg_footer());
