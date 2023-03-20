@@ -33,6 +33,7 @@ header {
   left: 0;
   z-index: 100;
   overflow: hidden;
+  transition: all 0.7s ease;
 }
 header .header_inner {
   width: 91.67%;
@@ -173,7 +174,7 @@ section .inner {
   width: 87.5%;
   max-width: 1680px;
   margin: 0 auto;
-  padding-top: 5.208vw;
+  padding-top: 7.208vw;
 }
 section .inner .title {
   font-family: "Montserrat", sans-serif;
@@ -199,7 +200,7 @@ main .inner {
   width: 87.5%;
   max-width: 1680px;
   margin: 0 auto;
-  padding-top: 5.208vw;
+  padding-top: 7.208vw;
   position: relative;
 }
 main .inner h1 {
@@ -1689,19 +1690,19 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   /*500px이하*/
   /*헤더*/
   header {
-    height: 60px;
-    padding-top: 1vw;
+    height: 40px;
+    padding-top: 0vw;
   }
   header .header_inner {
-    padding: 1vw;
+    padding: 0vw;
   }
   header .header_inner .logo {
     width: auto;
     padding: 1vw 0;
-    transform: translateY(15%);
+    transform: translateY(10%);
   }
   header .header_inner .logo a {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   header .header_inner nav {
     transform: translate(-5%, -10%);
@@ -1716,10 +1717,10 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   header .header_inner .gnb_open_btn {
     width: auto;
-    top: 0%;
+    top: -15%;
   }
   header .header_inner .gnb_open_btn i {
-    font-size: 3.5vw;
+    font-size: 3.75vw;
   }
   /*클릭시 열리는 메뉴바*/
   .gnb .gnb_open .gnb_open_list {
@@ -1746,15 +1747,16 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     padding-top: 15vw;
   }
   section .inner .title {
-    font-size: 9.8vw;
+    font-size: 8vw;
     margin-bottom: 9vw;
+    text-align: center;
   }
   section .inner .title_kr {
     display: none;
   }
   /*main*/
   main {
-    margin-top: 60px;
+    margin-top: 40px;
   }
   main .inner {
     /*소개 섹션*/
@@ -1900,7 +1902,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box {
     background: #000;
-    width: 100%;
+    width: 87.5%;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-img-box img {
     width: 100%;
@@ -1917,6 +1919,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .title {
     font-size: 7.5vw;
     margin-bottom: 1vw;
+    text-align: left;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .title br {
     display: none;
@@ -1951,9 +1954,9 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   }
   .work .inner .btn_container {
     width: 100%;
-    transform: translateY(30vh);
+    transform: translateY(20vh);
     margin: 0 auto;
-    margin-left: 10vw;
+    margin-left: 25%;
   }
   .work .inner .btn_container button {
     padding: 0.5vw;
@@ -1963,7 +1966,6 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   /*blog*/
   .blog {
     margin-bottom: 7vw;
-    height: calc(var(--var, 1vh) * 100);
   }
   .blog .inner .title {
     margin-bottom: 15vw;

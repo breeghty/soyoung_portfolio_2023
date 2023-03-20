@@ -9,7 +9,7 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh',`${vh}px`);
 //resize
 window.addEventListener('resize',()=>{
-    let vh = wiindow.innerHeight * 0.01;
+    let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh',`${vh}px`);
 })
 
@@ -48,7 +48,7 @@ let section_wr = sectionLink[2].offsetTop;
 let section_lg = sectionLink[3].offsetTop;
 let section_cm = sectionLink[4].offsetTop;
 let footer_top = document.querySelector('footer').offsetTop;
-
+const header = document.querySelector('header');
 
 /*active 된 nav li a의 active 클래스 해제*/ 
 function nav_active_reset(){
@@ -83,27 +83,34 @@ function handleScrollEvent() {
     if (scrollTop >= section_ab) {
         nav_active_reset();
         navLink[0].classList.add('active');
+        header.style.display = 'block';
     }
     // section_skill
     if (scrollTop >= section_sk) {
         nav_active_reset();
         navLink[1].classList.add('active');
+        header.style.display = 'block';
     }
     // section_work
     if (scrollTop >= section_wr) {
         nav_active_reset();
         navLink[2].classList.add('active');
+        header.style.display = 'block';
     }
     if(scrollTop >= section_lg){
         nav_active_reset();
         navLink[3].classList.add('active');
+        header.style.display = 'block';
     }
     if(scrollTop >= section_cm){
         nav_active_reset();
         navLink[4].classList.add('active');
+        header.style.display = 'block';
     }
     if(scrollTop>=footer_top){
         nav_active_reset();
+        header.style.display = 'none';
+        
     }
 
 }
@@ -400,7 +407,7 @@ var swiper = new Swiper(".mySwiper", {
         767:{
             slidesPerView: 1,
             spaceBetween: 30,
-        }
+        },
     }
 });
 

@@ -30,7 +30,7 @@ $vw-viewport: 1920;
     width: 87.5%;
     max-width: 1680px;
     margin:0 auto;
-    padding-top: 5.208vw;
+    padding-top: 7.208vw;
 }
 @mixin title{
     font-family: 'Montserrat', sans-serif;
@@ -137,6 +137,7 @@ header{
     left:0;
     z-index:100;
     overflow:hidden;
+    transition: all 0.7s ease;
     .header_inner{
         width:91.67%;
         max-width:1760px;
@@ -426,7 +427,6 @@ main{
         .about_left{
             float:left;
             width: 50%;
-            
         }
         .about_right{
             float:right;
@@ -2047,19 +2047,19 @@ footer{
     /*헤더*/
     header{
         // background: tomato;
-        height:60px;
-        padding-top: 1vw;
+        height:40px;
+        padding-top: 0vw;
         .header_inner{
-                padding: 1vw;
+                padding: 0vw;
                 //background: teal;
             .logo{
                     width:auto;
                     padding: 1vw 0;
                     // background: blue;
-                    transform: translateY(15%);
+                    transform: translateY(10%);
                     //background: red;
                     a{
-                        font-size: 3vw;
+                        font-size: 3.5vw;
                         //font-size: 2vw;
                     }
                 }
@@ -2079,9 +2079,9 @@ footer{
                 &_open_btn{
                     //background: teal;
                     width:auto;
-                    top:0%;
+                    top:-15%;
                     i{
-                        font-size: 3.5vw;
+                        font-size: 3.75vw;
                     }
 
                 }
@@ -2119,8 +2119,11 @@ footer{
             padding-top: 15vw;
             .title{
                 // font-size: v.$title-tb;
-                font-size: 9.8vw;
+                font-size: 8vw;
                 margin-bottom: 9vw;
+                // background: tomato;
+                text-align: center;
+                // display: none;
             }
             .title_kr{
                 display:none;
@@ -2133,7 +2136,7 @@ footer{
     }
     /*main*/
     main{
-        margin-top:60px;
+        margin-top:40px;
         .inner{
             h1{
                 width: 100%;
@@ -2299,7 +2302,7 @@ footer{
     }
     /*work*/
     .work{
-        // height: auto;
+        //height: auto;
         // background: blue;
         .inner{
             .slide-wrapper{
@@ -2308,7 +2311,7 @@ footer{
                     .slide-box{
                         .slide-img-box{
                             background: #000;
-                            width: 100%;
+                            width: 87.5%;
                             img{
                                 width: 100%;
                                 // height:100%;
@@ -2325,6 +2328,7 @@ footer{
                             .title{
                                 font-size: 7.5vw;
                                 margin-bottom: 1vw;
+                                text-align: left;
                                 br{
                                     display: none;
                                 }
@@ -2364,10 +2368,10 @@ footer{
             }
             .btn_container{
                 width:100%;
-                transform: translateY(30vh);
+                transform: translateY(20vh);
                 margin:0 auto;
                 // background: blue;
-                margin-left: 10vw;
+                margin-left: 25%;
                 button{
                     padding: 0.5vw;
                     margin:0.5vw;
@@ -2380,7 +2384,7 @@ footer{
     .blog{
         
         margin-bottom: 7vw;
-        height:v.$vh;
+        // height:v.$vh;
         .inner{
             
             .title{
