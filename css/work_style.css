@@ -1,0 +1,392 @@
+@charset "UTF-8";
+/*font-size horizontal tablet 태블릿 가로 */
+/*font-size vertical tablet 태블릿 세로 */
+/*xl title font*/
+/*모바일에서 vh 계산*/
+/*responsive*/
+/*기본설정*/
+.wrap {
+  width: 100%;
+  /* overflow: hidden; */
+  background: #000;
+  color: #fff;
+}
+
+.yellow {
+  color: #ffd500;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*헤더*/
+header {
+  width: 100%;
+  height: 80px;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  transition: all 0.7s ease;
+}
+header .header_inner {
+  width: 91.67%;
+  max-width: 1760px;
+  padding: 30px 0;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_inner .logo {
+  width: 117px;
+  height: 30px;
+}
+header .header_inner .logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 1.25vw;
+}
+header .header_inner nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header_inner nav li {
+  width: 20%;
+  box-sizing: border-box;
+  margin: 0 20px;
+  padding: 10px 20px;
+}
+header .header_inner nav li:hover a, header .header_inner nav li:focus a, header .header_inner nav li:active a {
+  color: #ffd500;
+  transition: all 0.2s ease;
+}
+header .header_inner nav li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 1vw;
+}
+header .header_inner nav li a.active {
+  color: #ffd500;
+  transition: all 0.2s ease;
+}
+header .header_inner .gnb_open_btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  cursor: pointer;
+}
+header .header_inner .gnb_open_btn i {
+  font-size: 36px;
+  color: #fff;
+}
+@media screen and (max-width: 1400px) {
+  header .header_inner .gnb_open_btn i {
+    font-size: 1.875vw;
+  }
+}
+
+/*클릭시 열리는 메뉴바*/
+.gnb .gnb_open {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: #000;
+}
+.gnb .gnb_open .gnb_open_list {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.gnb .gnb_open .gnb_open_list li {
+  margin-bottom: 40px;
+}
+.gnb .gnb_open .gnb_open_list li a {
+  font-size: 6.67vw;
+  transition: all 1s;
+}
+.gnb .gnb_open .gnb_open_list li a:active, .gnb .gnb_open .gnb_open_list li a:hover, .gnb .gnb_open .gnb_open_list li a:focus {
+  color: #ffd500;
+  transition: all 0.2s ease;
+}
+.gnb .gnb_open .gnb_close {
+  max-width: 65px;
+  width: 5vw;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.gnb .gnb_open .gnb_close:active, .gnb .gnb_open .gnb_close:focus, .gnb .gnb_open .gnb_close:hover {
+  animation: rotate_close 0.7s ease;
+}
+.gnb .gnb_open .gnb_close img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes rotate_close {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+/*메뉴 열고 닫기*/
+.gnb .gnb_open {
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.gnb .gnb_open.on {
+  width: 100%;
+  right: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/*섹션 공통*/
+main, section {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 5.21vw;
+}
+main .inner, section .inner {
+  width: 87.5%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding-top: 7.208vw;
+}
+main .inner .title, section .inner .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.34vw;
+  margin-bottom: 1.042vw;
+}
+main .inner .title_kr, section .inner .title_kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 1.042vw;
+  margin-bottom: 4.167vw;
+}
+
+/*메인 타이틀*/
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main .inner h1 {
+  font-size: 7.8125vw;
+  display: block;
+  transform: translate3d(0, -50%, 0);
+  line-height: 1.1;
+  margin-bottom: 2vw;
+}
+main .inner .mainTxt {
+  width: 50%;
+  box-sizing: border-box;
+}
+main .inner .mainTxt ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .inner .mainTxt ul li {
+  font-style: italic;
+  font-size: 1.25vw;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+/*work gallery*/
+.gallery {
+  height: 100vh;
+  overflow: hidden;
+}
+.gallery:nth-child(2n) {
+  background: #ffd500;
+  color: #000;
+}
+.gallery:nth-child(2n) .title {
+  color: #000;
+}
+.gallery .inner .gal-box {
+  width: 100vw;
+  float: left;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.gallery .inner .gal-box .gal-img-box {
+  width: 50%;
+  padding: 1.03vw;
+  box-sizing: border-box;
+}
+.gallery .inner .gal-box .gal-img-box img {
+  width: 100%;
+  height: auto;
+}
+.gallery .inner .gal-box .gal-txt-box {
+  width: 50%;
+  padding: 2.03vw 1.03vw;
+  box-sizing: border-box;
+  margin-left: 1vw;
+}
+.gallery .inner .gal-box .gal-txt-box .title {
+  margin-bottom: 2.823vw;
+  line-height: 1.4;
+}
+.gallery .inner .gal-box .gal-txt-box .subTitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.67vw;
+  margin-bottom: 1.198vw;
+  margin-bottom: 2.823vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subTxt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 1vw;
+  margin-bottom: 0.781vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin-top: 3.34vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li {
+  width: 20%;
+  margin-right: 0.5vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li:nth-child(1) {
+  width: 2.8645833333vw;
+  height: 2.6041666667vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li:nth-child(2) {
+  width: 2.1875vw;
+  height: 2.5vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li:nth-child(3) {
+  width: 1.5625vw;
+  height: 2.3958333333vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li:nth-child(4) {
+  width: 2.65625vw;
+  height: 2.6041666667vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li:nth-child(5) {
+  width: 1.8229166667vw;
+  height: 2.3958333333vw;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.gallery .inner .gal-box .gal-txt-box .subIcon li a img {
+  width: 100%;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+}
+footer .thx_para {
+  width: 100%;
+  padding: 1.823vw;
+  box-sizing: border-box;
+  background: #ffd500;
+  font-size: 3.34vw;
+  color: #000;
+  text-align: center;
+}
+footer .footer_inner {
+  width: 91.67%;
+  max-width: 1760px;
+  padding: 8.07vw 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+}
+footer .footer_inner .contact-l {
+  width: 40%;
+}
+footer .footer_inner .contact-l .contact_title {
+  font-size: 7.8125vw;
+  line-height: 1.1;
+}
+footer .footer_inner .contact-2 {
+  width: 60%;
+  transform: translate3d(0, 5%, 0);
+}
+footer .footer_inner .contact-2 .contact_txt {
+  font-size: 1.042vw;
+  line-height: 1.5;
+  margin-bottom: 2.08vw;
+}
+footer .footer_inner .contact-2 .mobile_img {
+  display: none;
+}
+footer .footer_inner .contact-2 .contact_line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-bottom: 2.08vw;
+  background: #fff;
+}
+footer .footer_inner .contact-2 .contact_adr .e-mail, footer .footer_inner .contact-2 .contact_adr .phone {
+  font-size: 3.34vw;
+  margin-bottom: 2.08vw;
+}
+footer .footer_inner .contact-2 .contact_adr .sns {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 30%;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li {
+  width: 20%;
+  height: auto;
+  padding: 0.5vw;
+  margin-right: 0.5vw;
+  box-sizing: border-box;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li:nth-child(4) {
+  transform: translate(0, 5px);
+}
+footer .footer_inner .contact-2 .contact_adr .sns li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+footer .footer_inner .contact-2 .contact_adr .sns li a img {
+  max-width: 45px;
+  width: 100%;
+  height: auto;
+}
+footer .footer_inner .contact-2 .contact_adr .copyright {
+  float: right;
+  transform: translate(0, 150%);
+  font-size: 0.84vw;
+}/*# sourceMappingURL=work_style.css.map */

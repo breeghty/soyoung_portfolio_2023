@@ -11,7 +11,7 @@ document.documentElement.style.setProperty('--vh',`${vh}px`);
 window.addEventListener('resize',()=>{
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh',`${vh}px`);
-})
+});
 
 //menubar menuopen, nav 사라짐
 let gnbOpen = document.querySelector('.gnb .gnb_open');
