@@ -195,28 +195,22 @@ main {
   display: grid;
   place-items: center;
 }
-main .inner {
-  display: flex;
-  justify-content: space-between;
-}
 main .inner .mainTit h1 {
   font-size: 7.8125vw;
   display: block;
   line-height: 1.1;
-  transform: translate3d(0, -25%, 0);
-}
-main .inner .mainTxt {
-  transform: translate3d(-15%, 25%, 0);
+  margin-bottom: 10vh;
+  transform: translate3d(0, 0%, 0);
 }
 main .inner .mainTxt p {
-  font-size: 1vw;
+  font-size: 1.25vw;
   line-height: 1.2;
   margin-bottom: 3vw;
 }
 main .inner .mainTxt .mainIcon {
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 20%;
 }
 main .inner .mainTxt .mainIcon li {
   width: 24%;
@@ -373,14 +367,18 @@ main .inner .mainTxt .mainIcon li a img {
   height: 100vh;
 }
 .prototype .inner .contentBox {
-  width: 98%;
+  width: 100%;
+  height: 0;
   margin: 0 auto;
+  padding-top: 56%;
   position: relative;
 }
 .prototype .inner .contentBox iframe {
   position: absolute;
   top: 5%;
   left: 1%;
+  width: 100%;
+  height: 100%;
 }
 
 /*footer*/

@@ -1749,7 +1749,6 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   section .inner .title {
     font-size: 8vw;
     margin-bottom: 9vw;
-    text-align: center;
   }
   section .inner .title_kr {
     display: none;
@@ -1934,7 +1933,7 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon {
     position: absolute;
     width: 35%;
-    bottom: -3%;
+    bottom: -5%;
     left: 0%;
   }
   .work .inner .slide-wrapper .slide-container .slide-box .slide-txt-box .subIcon li {
@@ -1956,16 +1955,16 @@ footer .footer_inner .contact-2 .contact_adr .copyright {
     width: 100%;
     transform: translateY(20vh);
     margin: 0 auto;
-    margin-left: 25%;
+    margin-left: 0%;
   }
   .work .inner .btn_container button {
     padding: 0.5vw;
     margin: 0.5vw;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   /*blog*/
   .blog {
-    margin-bottom: 7vw;
+    margin-bottom: 10vw;
   }
   .blog .inner .title {
     margin-bottom: 15vw;

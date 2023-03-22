@@ -2122,7 +2122,7 @@ footer{
                 font-size: 8vw;
                 margin-bottom: 9vw;
                 // background: tomato;
-                text-align: center;
+                //text-align: center;
                 // display: none;
             }
             .title_kr{
@@ -2343,7 +2343,7 @@ footer{
                             .subIcon{
                                 position:absolute;
                                 width:35%;
-                                bottom:-3%;
+                                bottom:-5%;
                                 left:0%;
                                 li{
                                     width:10%;
@@ -2371,19 +2371,19 @@ footer{
                 transform: translateY(20vh);
                 margin:0 auto;
                 // background: blue;
-                margin-left: 25%;
+                margin-left: 0%;
                 button{
                     padding: 0.5vw;
                     margin:0.5vw;
-                    font-size: 3vw;
+                    font-size: 3.5vw;
                 }
             }
         }
     }
     /*blog*/
     .blog{
-        
-        margin-bottom: 7vw;
+        margin-bottom: 10vw;
+        // overflow: hidden;
         // height:v.$vh;
         .inner{
             
