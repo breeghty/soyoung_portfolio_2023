@@ -4,6 +4,11 @@ document.addEventListener('click', function(e) {
     }
 });
 
+function preAlarm(e){
+    alert("준비중입니다.");
+    e.preventDefault();
+}
+
 //menubar menuopen, nav 사라짐
 let gnbOpen = document.querySelector('.gnb .gnb_open');
 document.querySelector('.gnb .gnb_open_btn').addEventListener('click',function(){

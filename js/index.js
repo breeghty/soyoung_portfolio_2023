@@ -1,9 +1,14 @@
 document.addEventListener('click', function(e) {
     if (e.target.matches('a[href="#"]')) {
         e.preventDefault();
+        
     }
 });
 
+function preAlarm(e){
+    alert("준비중입니다.");
+    e.preventDefault();
+}
 /**모바일 브라우저에서 100vh 오류 해결 */
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh',`${vh}px`);
